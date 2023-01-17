@@ -71,14 +71,20 @@
 
                         <ul class="menu-container">
                             <li class="menu-item"><a class="menu-link" href="demo-freelancer-about.html">
-                                    <div>About me</div>
+                                    <div>Profil</div>
                                 </a></li>
                             <li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
-                                    <div>Works</div>
+                                    <div>Regulasi</div>
+                                </a></li>
+							<li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
+                                    <div>Berita</div>
+                                </a></li>
+							<li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
+                                    <div>Galeri</div>
                                 </a></li>
                             <li class="menu-item"><a class="menu-link" href="#" data-scrollto="#footer"
                                                      data-easing="easeInOutExpo" data-speed="1250" data-offset="70">
-                                    <div>Contact</div>
+                                    <div>Kontak Kami</div>
                                 </a></li>
                         </ul>
 
@@ -97,14 +103,15 @@
             <div class="vertical-middle slider-element-fade">
                 <div class="container text-center py-5">
                     <div class="emphasis-title mb-2">
-                        <h4 class="text-uppercase ls3 fw-bolder mb-0">I'm a Freelance</h4>
+                        <h4 class="text-uppercase ls3 fw-bolder mb-0">Selamat Datang di Website Kami</h4>
                         <h1>
 								<span id="oc-images" class="owl-carousel image-carousel carousel-widget" data-items="1"
                                       data-margin="0" data-autoplay="3000" data-loop="true" data-nav="false"
                                       data-pagi="false" data-animate-in="fadeInUp">
 									<div
-                                        class="oc-item gradient-text gradient-red-yellow text-uppercase">Developer</div>
-									<div class="oc-item gradient-text gradient-red-yellow text-uppercase">Designer</div>
+                                        class="oc-item gradient-text gradient-red-yellow text-uppercase">KORPRI</div>
+									<div class="oc-item gradient-text gradient-red-yellow text-uppercase">KABUPATEN</div>
+									<div class="oc-item gradient-text gradient-red-yellow text-uppercase">SITUBONDO</div>
 								</span>
                         </h1>
                     </div>
