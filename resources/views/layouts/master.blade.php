@@ -85,14 +85,17 @@
                                     <div>Regulasi</div>
                                 </a></li>
 							<li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
-                                    <div>Berita</div>
+                                    <div>Layanan KORPRI</div>
                                 </a></li>
-							<li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
+                            <li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
+                                    <div>Kegiatan BANSOS</div>
+                                </a></li>
+                                <li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
                                     <div>Galeri</div>
                                 </a></li>
                             <li class="menu-item"><a class="menu-link" href="#" data-scrollto="#footer"
                                                      data-easing="easeInOutExpo" data-speed="1250" data-offset="70">
-                                    <div>Kontak Kami</div>
+                                    <div>Pengumuman</div>
                                 </a></li>
                         </ul>
 
