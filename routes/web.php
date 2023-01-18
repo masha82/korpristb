@@ -22,6 +22,29 @@ Route::get('/visi', function () {
     return view('visi');
 });
 
+Route::get('/regulasi', function () {
+    return view('regulasi');
+});
+
+Route::get('/struktur', function () {
+    return view('struktur');
+});
+
+Route::get('/layanan', function () {
+    return view('layanan');
+});
+
+Route::get('/kegiatan-bansos', function () {
+    return view('bansos');
+});
+
+Route::get('/galeri', function () {
+    return view('galeri');
+});
+
+Route::get('/pengumuman', function () {
+    return view('pengumuman');
+});
 
 Auth::routes();
 

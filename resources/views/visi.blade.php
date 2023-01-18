@@ -35,8 +35,8 @@
         </div>
         <div class="col-md-4">
             <img src="{{ asset('sekda.png') }}" alt="FAQs" class="px-5 mt-4">
-            <p class="text-center mb-0 mt-2"><strong>WAWAN</strong></p>
-            <p class="text-center mb-0">Ketua KORPRI Kabupaten Situbondo coooyy</p>
+            <p class="text-center mb-0 mt-2"><strong>WAWAN SETIAWAN, S.H, M.H.</strong></p>
+            <p class="text-center mb-0">Ketua KORPRI Kabupaten Situbondo</p>
         </div>
     </div>
 @endsection
