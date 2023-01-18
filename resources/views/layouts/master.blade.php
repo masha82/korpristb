@@ -45,10 +45,10 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="demo-freelancer.html" class="standard-logo"><img src="demos/freelancer/images/logo.png"
+                        <a href="demo-freelancer.html" class="standard-logo"><img src="{{ asset('logo_situbondo.png') }}"
                                                                                   alt="Canvas Logo"></a>
                         <a href="demo-freelancer.html" class="retina-logo"><img
-                                src="demos/freelancer/images/logo@2x.png" alt="Canvas Logo"></a>
+                                src="{{ asset('logo_situbondo.png') }}" alt="Canvas Logo"></a>
                     </div><!-- #logo end -->
 
                 
