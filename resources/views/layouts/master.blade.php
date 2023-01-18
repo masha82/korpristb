@@ -75,26 +75,26 @@
                                 </a>
                                 <ul class="sub-menu-container" style="">
                                     <li class="menu-item" style="">
-                                        <a class="menu-link" href="intro.html#section-niche"><div>Niche Demos</div></a>
-                                    </li><li class="menu-item" style=""><a href="blocks.html" target="_blank" class="menu-link"><div>Blocks</div></a></li>
+                                        <a class="menu-link" href="intro.html#section-niche"><div>Visi dan Misi</div></a>
+                                    </li>
                                     <li class="menu-item" style="">
-                                        <a class="menu-link" href="intro.html#section-onepage"><div>One-Page Demos</div></a>
-                                    </li>                            </ul>
+                                        <a href="blocks.html" target="_blank" class="menu-link"><div>Dasar Hukum</div></a>
+                                    </li>
+                                    <li class="menu-item" style="">
+                                        <a class="menu-link" href="intro.html#section-onepage"><div>Struktur Organisasi</div></a>
+                                    </li>                      
+                                </ul>
                             </li>
-                            <li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
-                                    <div>Regulasi</div>
-                                </a></li>
-							<li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
+            				<li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
                                     <div>Layanan KORPRI</div>
                                 </a></li>
                             <li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
                                     <div>Kegiatan BANSOS</div>
                                 </a></li>
-                                <li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
+                            <li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
                                     <div>Galeri</div>
                                 </a></li>
-                            <li class="menu-item"><a class="menu-link" href="#" data-scrollto="#footer"
-                                                     data-easing="easeInOutExpo" data-speed="1250" data-offset="70">
+                            <li class="menu-item"><a class="menu-link" href="demo-freelancer-works.html">
                                     <div>Pengumuman</div>
                                 </a></li>
                         </ul>
