@@ -51,10 +51,6 @@
                                 src="demos/freelancer/images/logo@2x.png" alt="Canvas Logo"></a>
                     </div><!-- #logo end -->
 
-                    <div class="header-misc">
-                        <a href="mailto:noreply@canvas.com" class="button button-border rounded-pill">Email Us</a>
-                    </div>
-
                     <div id="primary-menu-trigger">
                         <svg class="svg-trigger" viewBox="0 0 100 100">
                             <path
@@ -75,13 +71,13 @@
                                 </a>
                                 <ul class="sub-menu-container" style="">
                                     <li class="menu-item" style="">
-                                        <a class="menu-link" href="intro.html#section-niche"><div>Visi dan Misi</div></a>
+                                        <a class="menu-link" href="#"><div>Visi dan Misi</div></a>
                                     </li>
                                     <li class="menu-item" style="">
-                                        <a href="blocks.html" target="_blank" class="menu-link"><div>Dasar Hukum</div></a>
+                                    <a class="menu-link" href="#"><div>Dasar Hukum</div></a>
                                     </li>
                                     <li class="menu-item" style="">
-                                        <a class="menu-link" href="intro.html#section-onepage"><div>Struktur Organisasi</div></a>
+                                        <a class="menu-link" href="#"><div>Struktur Organisasi</div></a>
                                     </li>                      
                                 </ul>
                             </li>
