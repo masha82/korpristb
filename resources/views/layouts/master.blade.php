@@ -111,7 +111,7 @@
     <section id="content">
 
         <div class="content-wrap p-0">
-        @yield('content')
+    @yield('content')
         </div>
 
     </section><!-- #content end -->
