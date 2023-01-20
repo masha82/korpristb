@@ -46,6 +46,10 @@ Route::get('/pengumuman', function () {
     return view('pengumuman');
 });
 
+Route::get('/formlayanan', function () {
+    return view('formlayanan');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
