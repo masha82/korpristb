@@ -27,16 +27,11 @@ style="background: #FFF url('demos/freelancer/images/hero-bg.svg') repeat top ce
            <span class="text-uppercase fw-bold ms-3">SemiColonWeb</span>
        </div> -->
        <div class="mx-auto" style="max-width: 600px">
-           <p class="lead fw-normal text-dark mb-5">Authoritatively expedite backward-compatible e-commerce
-               with cross-media e-commerce. Credibly provide access to world-class action items through
-               resource-leveling resources.</p>
+           <p class="lead fw-normal text-dark mb-5">Korps Pegawai Republik Indonesia atau biasa dikenal KORPRI berdiri berdasarkan Keputusan Presiden Nomor 82 Tahun 1971,<br> 29 November 1971. </p>
            <a href="demo-freelancer-works.html"
-              class="button button-dark button-hero h-translatey-3 tf-ts button-reveal overflow-visible bg-dark text-end"><span>View our Works</span><i
+              class="button button-dark button-hero h-translatey-3 tf-ts button-reveal overflow-visible bg-dark text-end"><span>Selengkapnya</span><i
                    class="icon-line-arrow-right"></i></a>
-           <a href="#" data-scrollto="#footer" data-easing="easeInOutExpo" data-speed="1250"
-              data-offset="70" class="button button-large button-light text-dark bg-transparent m-0"><i
-                   class="icon-line2-arrow-down fw-bold"></i> <u>Contact Me</u></a>
-       </div>
+        </div>
    </div>
 </div>
 </div>
