@@ -53,3 +53,4 @@ Route::get('/formlayanan', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('services', \App\Http\Controllers\JenisLayananController::class);

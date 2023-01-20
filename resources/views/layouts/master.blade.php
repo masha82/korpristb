@@ -220,21 +220,4 @@
 <script src="{{asset('assets/js/functions.js')}}"></script>
 @stack('js')
 
-<script>
-    // Owl Carousel Scripts
-    jQuery(window).on('pluginCarouselReady', function () {
-        $('#oc-services').owlCarousel({
-            items: 1,
-            margin: 30,
-            nav: false,
-            dots: true,
-            smartSpeed: 400,
-            responsive: {
-                576: {stagePadding: 30, items: 1},
-                768: {stagePadding: 30, items: 2},
-                991: {stagePadding: 150, items: 3},
-                1200: {stagePadding: 150, items: 3}
-            },
-        });
-    });
-</script>
+
