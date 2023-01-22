@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    <title>Form Layanan KORPRI</title>
+    <title>Form Layanan KOPRI</title>
 @endsection
 @section('content')
     <section id="content">
@@ -19,24 +19,12 @@
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
-                                <label>Nama Layanan:</label>
+                                <label>File (Foto):</label>
                                 <input type="text" name="nama" id="jobs-application-name" class="form-control">
                             </div>
                             <div class="col-12 form-group">
-                                <label>Informasi Layanan:</label>
-                                <input type="text" name="informasi" id="jobs-application-email" class="form-control">
-                            </div>
-                            <div class="col-12 form-group">
-                                <label>Mekanisme:</label>
-                                <input type="text" name="mekanisme" id="jobs-application-phone" class="form-control">
-                            </div>
-                            <div class="col-12 form-group">
-                                <label>Persyaratan:</label>
-                                <input type="text" name="syarat" id="jobs-application-location" class="form-control">
-                            </div>
-                            <div class="col-12 form-group">
                                 <label>Keterangan:</label>
-                                <input type="text" name="keterangan" id="jobs-application-location" class="form-control">
+                                <input type="text" name="informasi" id="jobs-application-email" class="form-control">
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Simpan</button>
@@ -84,7 +72,7 @@
                                 many voices impact crisis situation poverty pride. Vaccine carbon.</p>
                         </div>
                     </div>
-                </div>>
+                </div>
             </div>
         </div>
         </div>

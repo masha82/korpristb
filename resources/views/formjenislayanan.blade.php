@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-    <title>Form Berita</title>
+    <title>Form Jenis Layanan KORPRI</title>
 @endsection
 @section('content')
     <section id="content">
@@ -19,35 +19,23 @@
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
-                                <label>Judul Berita:</label>
+                                <label>Nama Layanan:</label>
                                 <input type="text" name="nama" id="jobs-application-name" class="form-control">
                             </div>
                             <div class="col-12 form-group">
-                                <label>Kategori:</label>
+                                <label>Informasi Layanan:</label>
                                 <input type="text" name="informasi" id="jobs-application-email" class="form-control">
                             </div>
                             <div class="col-12 form-group">
-                                <label>Isi Berita:</label>
+                                <label>Mekanisme:</label>
                                 <input type="text" name="mekanisme" id="jobs-application-phone" class="form-control">
                             </div>
                             <div class="col-12 form-group">
-                                <label>Hashtag:</label>
+                                <label>Persyaratan:</label>
                                 <input type="text" name="syarat" id="jobs-application-location" class="form-control">
                             </div>
                             <div class="col-12 form-group">
-                                <label>File:</label>
-                                <input type="text" name="keterangan" id="jobs-application-location" class="form-control">
-                            </div>
-                            <div class="col-12 form-group">
-                                <label>Status:</label>
-                                <input type="text" name="keterangan" id="jobs-application-location" class="form-control">
-                            </div>
-                            <div class="col-12 form-group">
-                                <label>Sumber:</label>
-                                <input type="text" name="keterangan" id="jobs-application-location" class="form-control">
-                            </div>
-                            <div class="col-12 form-group">
-                                <label>Editor:</label>
+                                <label>Keterangan:</label>
                                 <input type="text" name="keterangan" id="jobs-application-location" class="form-control">
                             </div>
                             <div class="col-12">

@@ -50,6 +50,18 @@ Route::get('/formlayanan', function () {
     return view('formlayanan');
 });
 
+Route::get('/formberita', function () {
+    return view('formberita');
+});
+
+Route::get('/formgaleri', function () {
+    return view('formgaleri');
+});
+
+Route::get('/formkegbansos', function () {
+    return view('formkegbansos');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
