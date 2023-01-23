@@ -22,6 +22,26 @@
                                 <label>File (Foto):</label>
                                 <input type="text" name="nama" id="jobs-application-name" class="form-control">
                             </div>
+                            <div class="col-lg-6 bottommargin">
+                                <label>File (Foto):</label><br>
+                                <div class="file-input file-input-new">
+                                <div class="kv-upload-progress kv-hidden" style="display: none;"><div class="progress">
+                                    <div class="progress-bar bg-success progress-bar-success progress-bar-striped active progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                                        0%
+                                     </div>
+                                </div></div><div class="clearfix"></div>
+                                <div class="input-group file-caption-main">
+                                  <div class="file-caption form-control kv-fileinput-caption" tabindex="500">
+                                  <span class="file-caption-icon"></span>
+                                  <input readonly="" class="file-caption-name" placeholder="Select file ..." title="">
+                                </div>
+                                      <button type="button" title="Clear all unprocessed files" class="btn btn-default btn-secondary fileinput-remove fileinput-remove-button" tabindex="500"><i class="icon-trash"></i>  <span class="hidden-xs">Remove</span></button>
+                                      <button type="button" title="Abort ongoing upload" class="btn btn-default btn-secondary kv-hidden fileinput-cancel fileinput-cancel-button"><i class="icon-ban-circle"></i>  <span class="hidden-xs">Cancel</span></button>
+                                      
+                                      <button type="submit" title="Upload selected files" class="btn btn-default btn-secondary fileinput-upload fileinput-upload-button" tabindex="500"><i class="icon-upload"></i>  <span class="hidden-xs">Upload</span></button>
+                                      <div class="btn btn-primary btn-file" tabindex="500"><i class="icon-folder-open"></i>&nbsp;  <span class="hidden-xs">Pilih File</span><input id="input-1" type="file" class="file" data-show-preview="false"></div>
+                                </div></div>
+                                </div>
                             <div class="col-12 form-group">
                                 <label>Keterangan:</label>
                                 <input type="text" name="informasi" id="jobs-application-email" class="form-control">
