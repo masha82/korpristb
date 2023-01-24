@@ -30,11 +30,11 @@ Route::get('/struktur', function () {
     return view('struktur');
 });
 
-Route::get('/layanan', function () {
+Route::get('/layanankorpri', function () {
     return view('layanan');
 });
 
-Route::get('/kegiatan-bansos', function () {
+Route::get('/kegiatanbansos', function () {
     return view('bansos');
 });
 
@@ -46,8 +46,8 @@ Route::get('/pengumuman', function () {
     return view('pengumuman');
 });
 
-Route::get('/formlayanan', function () {
-    return view('formlayanan');
+Route::get('/formjenislayanan', function () {
+    return view('formjenislayanan');
 });
 
 Route::get('/formberita', function () {
@@ -62,7 +62,30 @@ Route::get('/formkegbansos', function () {
     return view('formkegbansos');
 });
 
+Route::get('/formlayanan', function () {
+    return view('formlayanan');
+});
+
+Route::get('/formpengumuman', function () {
+    return view('formpengumuman');
+});
+
+Route::get('/formregulasi', function () {
+    return view('formregulasi');
+});
+
+Route::get('/formstruktur', function () {
+    return view('formstruktur');
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('services', \App\Http\Controllers\JenisLayananController::class);
+Route::resource('news', \App\Http\Controllers\BeritaController::class);
+Route::resource('bansos', \App\Http\Controllers\BansosController::class);
+Route::resource('gallery', \App\Http\Controllers\GaleriController::class);
+Route::resource('layanan', \App\Http\Controllers\LayananController::class);
+Route::resource('info', \App\Http\Controllers\PengumumanController::class);
+Route::resource('hukum', \App\Http\Controllers\RegulasiController::class);
+Route::resource('structure', \App\Http\Controllers\StrukturController::class);

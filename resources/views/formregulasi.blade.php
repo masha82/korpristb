@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     <div class="col-lg-6">
-                        <form class="row" action="{{ route('services.store') }}" method="post"
+                        <form class="row" action="{{ route('hukum.store') }}" method="post"
                             enctype="multipart/form-data">
                             @csrf
                             @method('POST')
