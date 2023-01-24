@@ -28,7 +28,7 @@
                             </div>
                             <div class="col-12 form-group">
                                 <label>Isi Pengumuman:</label>
-                                <input type="text" name="mekanisme" id="jobs-application-phone" class="form-control">
+                                <textarea class="summernote" name="isi"></textarea>
                             </div>
                             <div class="col-12 form-group">
                                 <label class="form-label" for="customFile">Thumbnail Pengumuman:</label>
@@ -62,3 +62,12 @@
         </div>
     </section>
 @endsection
+@push('js')
+<script>
+    $('.summernote').summernote({
+      placeholder: 'Isikan Informasi/Pengumuman tentang KOPRI Kabupaten Situbondo',
+      tabsize: 2,
+      height: 100
+    });
+  </script>
+@endpush
