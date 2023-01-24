@@ -81,7 +81,8 @@
                                     </li>
                                     <li class="menu-item" style="">
                                         <a class="menu-link" href="{{url('struktur')}}"><div>Struktur Organisasi</div></a>
-                                    </li>                      
+                                    </li>
+                                                         
                                 </ul>
                             </li>
             				<li class="menu-item"><a class="menu-link" href="{{url('layanankorpri')}}">
@@ -90,14 +91,41 @@
                             <li class="menu-item"><a class="menu-link" href="{{url('kegiatanbansos')}}">
                                     <div>Kegiatan BANSOS</div>
                                 </a></li>
+                            
                             <li class="menu-item"><a class="menu-link" href="{{url('galeri')}}">
                                     <div>Galeri</div>
                                 </a></li>
+                            
                             <li class="menu-item"><a class="menu-link" href="{{url('pengumuman')}}">
                                     <div>Pengumuman</div>
                                 </a></li>
+                        
+                        <li class="menu-item"><a class="menu-link" href="#">
+                            <div>Admin</div>
+                        </a>
+                        <ul class="sub-menu-container" style="">
+                            <li class="menu-item" style="">
+                                <a class="menu-link" href="{{url('formregulasi')}}"><div>Form Dasar Hukum</div></a>
+                            </li>
+                            <li class="menu-item" style="">
+                                <a class="menu-link" href="{{url('formstruktur')}}"><div>Form Struktur Organisasi</div></a>
+                            </li> 
+                            <li class="menu-item"><a class="menu-link" href="{{url('formjenislayanan')}}">
+                                <div>Form Jenis Layanan KORPRI</div>
+                            </a></li>
+                            <li class="menu-item"><a class="menu-link" href="{{url('formlayanan')}}">
+                                <div>Form Foto Layanan KORPRI</div>
+                            </a></li>
+                            <li class="menu-item"><a class="menu-link" href="{{url('formkegbansos')}}">
+                                <div>Form Kegiatan BANSOS</div>
+                            </a></li>
+                            <li class="menu-item"><a class="menu-link" href="{{url('formgaleri')}}">
+                                <div>Form Galeri</div>
+                            </a></li>
+                            <li class="menu-item"><a class="menu-link" href="{{url('formpengumuman')}}">
+                                <div>Form Pengumuman</div>
+                            </a></li>
                         </ul>
-
                     </nav><!-- #primary-menu end -->
 
                 </div>
