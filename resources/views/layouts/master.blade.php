@@ -69,6 +69,9 @@
                     <nav class="primary-menu">
 
                         <ul class="menu-container">
+                            <li class="menu-item"><a class="menu-link" href="{{url('beranda')}}">
+                                <div>Beranda</div>
+                            </a></li>   
                             <li class="menu-item"><a class="menu-link" href="#">
                                     <div>Profil</div>
                                 </a>
