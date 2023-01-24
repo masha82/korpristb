@@ -98,7 +98,6 @@
                             <li class="menu-item"><a class="menu-link" href="{{url('galeri')}}">
                                     <div>Galeri</div>
                                 </a></li>
-                            
                             <li class="menu-item"><a class="menu-link" href="{{url('pengumuman')}}">
                                     <div>Pengumuman</div>
                                 </a></li>

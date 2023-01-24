@@ -13,5 +13,5 @@ class Regulasi extends Model
      *
      * @var array
      */
-    protected $fillable = ['judul', 'nomor', 'jenis', 'file', 'status'];
+    protected $fillable = ['judul', 'nomor', 'tahun', 'jenis',  'dokumen', 'status'];
 }

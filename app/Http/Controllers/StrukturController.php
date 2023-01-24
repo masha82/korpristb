@@ -35,7 +35,7 @@ class StrukturController extends Controller
      */
     public function store(Request $request)
     {
-
+        
         $data = Struktur::create($request->all());
         return redirect()->back()->with(['success' => 'Data berhasil disimpan.']);
     }

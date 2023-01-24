@@ -20,11 +20,11 @@
                             @method('POST')
                             <div class="col-12 form-group">
                                 <label>Judul Pengumuman:</label>
-                                <input type="text" name="nama" id="jobs-application-name" class="form-control">
+                                <input type="text" name="judul" id="judul" class="form-control">
                             </div>
                             <div class="col-12 form-group">
                                 <label>Kategori Pengumuman:</label>
-                                <input type="text" name="informasi" id="jobs-application-email" class="form-control">
+                                <input type="text" name="kategori" id="kategori" class="form-control">
                             </div>
                             <div class="col-12 form-group">
                                 <label>Isi Pengumuman:</label>
@@ -32,23 +32,23 @@
                             </div>
                             <div class="col-12 form-group">
                                 <label class="form-label" for="customFile">Thumbnail Pengumuman:</label>
-                                <input type="file" class="form-control" id="customFile" />
+                                <input type="file" class="form-control" name="thumbnail" id="thumbnail" />
                             </div>
                             <div class="col-12 form-group">
-                                <label class="form-label" for="customFile">Upload Dokumen:</label>
-                                <input type="file" class="form-control" id="customFile" />
+                                <label class="form-label">Upload Dokumen:</label>
+                                <input type="file" class="form-control" name="file" id="file" />
                             </div>
                             <div class="col-12 form-group">
                                 <label for="sel1">Status:</label>
-                                <select class="form-control" id="sel1">
+                                <select class="form-control" name="status" id="status">
                                     <option><label>-- Pilih Salah Satu --</label></option>
-                                    <option>Draft</option>
-                                    <option>Publish</option>
+                                    <option value="1">Draft</option>
+                                    <option value="2">Publish</option>
                                 </select>
                             </div>
                             <div class="col-12 form-group">
                                 <label>Sumber:</label>
-                                <input type="text" name="keterangan" id="jobs-application-location" class="form-control">
+                                <input type="text" name="sumber" id="sumber" class="form-control">
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Simpan</button>

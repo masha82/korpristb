@@ -17,6 +17,7 @@
                         <th>NO</th>
                         <th>JUDUL REGULASI</th>
                         <th>NOMOR</th>
+                        <th>TAHUN</th>
                         <th>JENIS</th>
                         <th>UNDUH</th>
                         </tr>
