@@ -13,6 +13,6 @@ class Berita extends Model
      *
      * @var array
      */
-    protected $fillable = ['judul', 'kategori', 'isi', 'hashtag', 'file', 'status', 'sumber', 'editor'];
+    protected $fillable = ['judul', 'kategori', 'isi', 'file', 'status', 'sumber', 'editor'];
     
 }

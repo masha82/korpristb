@@ -31,10 +31,6 @@
                                 <textarea class="summernote" name="isi"></textarea>
                             </div>
                             <div class="col-12 form-group">
-                                <label>Hashtag:</label>
-                                <input type="text" name="syarat" id="jobs-application-location" class="form-control">
-                            </div>
-                            <div class="col-12 form-group">
                                 <label class="form-label" for="customFile">Upload Foto:</label>
                                 <input type="file" class="form-control" id="customFile" />
                             </div>
