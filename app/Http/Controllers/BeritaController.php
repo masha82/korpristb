@@ -35,8 +35,12 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-
-        $data = Berita::create($request->all());
+        $data = $request->all();
+        $file = $request->file('file');
+        $new_name = rand() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path("gambar"), $new_name);
+        $data['file'] = $new_name;
+        $data = Berita::create($data);
         return redirect()->back()->with(['success' => 'Data berhasil disimpan.']);
     }
 

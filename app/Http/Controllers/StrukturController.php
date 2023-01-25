@@ -35,8 +35,12 @@ class StrukturController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $data = Struktur::create($request->all());
+        $data = $request->all();
+        $file = $request->file('file');
+        $new_name = rand() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path("struktur"), $new_name);
+        $data['file'] = $new_name;
+        $data = Struktur::create($data);
         return redirect()->back()->with(['success' => 'Data berhasil disimpan.']);
     }
 

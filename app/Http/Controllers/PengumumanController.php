@@ -35,8 +35,18 @@ class PengumumanController extends Controller
      */
     public function store(Request $request)
     {
-
-        $data = Pengumuman::create($request->all());
+        $data = $request->all();
+        //thumbnail
+        $file = $request->file('thumbnail');
+        $nama_thumbnail = rand() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path("screenshot"), $nama_thumbnail);
+        $data['thumbnail'] = $nama_thumbnail;
+        //file
+        $file = $request->file('file');
+        $nama_file = rand() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path("dokumen"), $nama_file);
+        $data['file'] = $nama_file;
+        $data = Pengumuman::create($data);
         return redirect()->back()->with(['success' => 'Data berhasil disimpan.']);
     }
 

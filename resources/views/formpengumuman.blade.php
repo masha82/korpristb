@@ -64,10 +64,17 @@
 @endsection
 @push('js')
 <script>
-    $('.summernote').summernote({
-      placeholder: 'Isikan Informasi/Pengumuman tentang KOPRI Kabupaten Situbondo',
-      tabsize: 2,
-      height: 100
-    });
+   $('.summernote').summernote({
+  toolbar: [
+    // [groupName, [list of button]]
+    ['style', ['bold', 'italic', 'underline', 'clear']],
+    ['font', ['strikethrough', 'superscript', 'subscript']],
+    ['fontsize', ['fontsize']],
+    ['color', ['color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['height', ['height']],
+    ['link', ['link']]
+  ]
+});
   </script>
 @endpush
