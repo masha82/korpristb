@@ -19,12 +19,12 @@
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
-                                <label class="form-label" for="customFile">Upload Foto:</label>
-                                <input type="file" class="form-control" id="customFile" />
+                                <label class="form-label" >Upload Foto:</label>
+                                <input type="file" class="form-control" name="file" id="file" />
                             </div>
                             <div class="col-12 form-group">
                                 <label>Keterangan:</label>
-                                <input type="text" name="informasi" id="jobs-application-email" class="form-control">
+                                <input type="text" name="keterangan" id="keterangan" class="form-control">
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Simpan</button>
@@ -38,3 +38,4 @@
         </div>
     </section>
 @endsection
+

@@ -20,11 +20,11 @@
                             @method('POST')
                             <div class="col-12 form-group">
                                 <label>Tanggal Kegiatan:</label>
-                                <input type="text" name="nama" id="jobs-application-name" class="form-control">
+                                <input type="text"  name="tgl_keg" id="tgl_keg" class="form-control datepicker">
                             </div>
                             <div class="col-12 form-group">
                                 <label>Keterangan:</label>
-                                <input type="text" name="informasi" id="jobs-application-email" class="form-control">
+                                <input type="text" name="keterangan" id="keterangan" class="form-control">
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary" type="submit">Simpan</button>
@@ -38,3 +38,11 @@
         </div>
     </section>
 @endsection
+@push('js')
+<script>
+    $('.datepicker').datepicker({
+        format: 'yyyy-mm-dd'
+    });
+
+  </script>
+@endpush
