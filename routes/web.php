@@ -20,9 +20,6 @@ Route::get('/visi', function () {
     return view('visi');
 });
 
-Route::get('/regulasi', function () {
-    return view('regulasi');
-});
 
 Route::get('/struktur', function () {
     return view('struktur');
@@ -87,3 +84,4 @@ Route::resource('layanan', \App\Http\Controllers\LayananController::class);
 Route::resource('info', \App\Http\Controllers\PengumumanController::class);
 Route::resource('hukum', \App\Http\Controllers\RegulasiController::class);
 Route::resource('structure', \App\Http\Controllers\StrukturController::class);
+Route::resource('regulasi', \App\Http\Controllers\RegulasiController::class);

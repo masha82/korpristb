@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Regulasi;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class RegulasiController extends Controller
 {
@@ -12,9 +13,17 @@ class RegulasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            return DataTables::of(Regulasi::query())
+            ->addColumn('action', function ($data) {
+                $del = '<a href="#" data-id="' . $data->id . '" class="btn btn-danger hapus-data"><i class="fa fa-download"></i></a>';
+                return $edit . '&nbsp' . $del;
+            })
+            ->make(true);
+        }
+        return view('regulasi');
     }
 
     /**

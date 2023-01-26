@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@push('css')
+    <link rel="stylesheet" href="{{ url('https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css') }}">
+@endpush
 @section('title')
     <title>DASAR HUKUM</title>
 @endsection
@@ -11,58 +14,58 @@
                     <h4 class="gradient-text center gradient-horizon">REGULASI YANG BERKAITAN DENGAN KORPRI </h4>
                 </div>
                 <div>
-                    <table class="table table-hover">
+                    <table class="table table-striped" id="myTable">
                         <thead>
-                        <tr>
-                        <th>NO</th>
-                        <th>JUDUL REGULASI</th>
-                        <th>NOMOR</th>
-                        <th>TAHUN</th>
-                        <th>JENIS</th>
-                        <th>UNDUH</th>
-                        </tr>
+                            <tr>
+                                <th>JUDUL REGULASI</th>
+                                <th>NOMOR</th>
+                                <th>TAHUN</th>
+                                <th>JENIS</th>
+                                <th>UNDUH</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Peraturan</td>
-                            <td>Nomor</td>
-                            <td>Jenis</td>
-                            <td>Unduh</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Peraturan</td>
-                            <td>Nomor</td>
-                            <td>Jenis</td>
-                            <td>Unduh</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Peraturan</td>
-                            <td>Nomor</td>
-                            <td>Jenis</td>
-                            <td>Unduh</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Peraturan</td>
-                            <td>Nomor</td>
-                            <td>Jenis</td>
-                            <td>Unduh</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Peraturan</td>
-                            <td>Nomor</td>
-                            <td>Jenis</td>
-                            <td>Unduh</td>
-                        </tr>
+
                         </tbody>
-                        </table>
+                    </table>
                 </div>
             </div>
         </div>
-
     </div>
 @endsection
+@push('js')
+    <script src="{{ url('https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            var table = $('#myTable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('regulasi.index') }}",
+                columns: [{
+                        data: 'judul',
+                        name: 'judul'
+                    },
+                    {
+                        data: 'nomor',
+                        name: 'nomor'
+                    },
+                    {
+                        data: 'tahun',
+                        name: 'tahun'
+                    },
+                    {
+                        data: 'jenis',
+                        name: 'jenis'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
+                ]
+            });
+        });
+    </script>
+@endpush
