@@ -44,57 +44,64 @@
 
                     <div class="row posts-md col-mb-30 mb-4">
                         @foreach ($berita as $item)
-                        <div class="entry col-sm-6 col-lg-3">
-                            <div class="grid-inner">
-                                <div class="entry-image">
-                                    <a href="#"><img src="{{ asset('gambar/'.$item->file) }}" alt="Image"></a>
-                                </div>
-                                <div class="entry-title title-xs nott">
-                                    <h3><a href="blog-single.html">{{$item->judul}}</a></h3>
-                                </div>
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li><i class="icon-calendar3"></i> {{\Carbon\Carbon::parse($item->created_at)->isoFormat("dddd, D MMMM Y")}}</li>
-                                    </ul>
+                            <div class="entry col-sm-6 col-lg-3">
+                                <div class="grid-inner">
+                                    <div class="entry-image">
+                                        <a href="#"><img src="{{ asset('gambar/' . $item->file) }}"
+                                                alt="Image"></a>
+                                    </div>
+                                    <div class="entry-title title-xs nott">
+                                        <h3><a href="blog-single.html">{{ $item->judul }}</a></h3>
+                                    </div>
+                                    <div class="entry-meta">
+                                        <ul>
+                                            <li><i class="icon-calendar3"></i>
+                                                {{ \Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y') }}
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
-                       
+
                     </div>
 
                 </div>
             </div>
         </div>
     </section>
-    
+
+ 
     <!-- #section 2 -->
     <section id="content">
         <div class="container clearfix">
+        <div class="row col-mb-50">
+        <div class="col-12">
 
-            <div class="row col-mb-50">
-                <div class="col-12">
-
-                    <div class="fancy-title title-border title-center">
-                        <h3>Galeri Foto Kegiatan</h3>
-                    </div>
-
-                    <div class="row posts-md col-mb-30 mb-4">
-                        @foreach ($galeri as $item)
-                        <div class="entry col-sm-6 col-lg-3">
-                            <div class="grid-inner">
-                                <div class="entry-image">
-                                    <a href="#"><img src="{{ asset('galeri/'.$item->file) }}" alt="Image"></a>
-                                </div>
-                                
-                            </div>
+        <div class="fancy-title title-border title-center">
+            <h3>Galeri Foto Kegiatan</h3>
+        </div>
+        <div class="masonry-thumbs grid-container grid-6 has-init-isotope" data-big="3" data-lightbox="gallery"
+            style="position: relative; height: 295.664px;">
+            @foreach ($galeri as $item)
+            <a class="grid-item" href="{{ asset('galeri/' . $item->file) }}" data-lightbox="gallery-item"
+                style="position: absolute; left: 0%; top: 0px;">
+                <div class="grid-inner">
+                    <img src="{{ asset('galeri/' . $item->file) }}" alt="Gallery">
+                    <div class="bg-overlay">
+                        <div class="bg-overlay-content dark">
+                            <i class="icon-line-plus h4 mb-0 animated fadeOut" data-hover-animate="fadeIn"
+                                style="animation-duration: 600ms;"></i>
                         </div>
-                        @endforeach
-                       
+                        <div class="bg-overlay-bg dark animated fadeOut" data-hover-animate="fadeIn"
+                            style="animation-duration: 600ms;"></div>
                     </div>
-
                 </div>
-            </div>
+            </a>
+            @endforeach
+        </div>
+        </div>
+        </div>
         </div>
     </section>
 @endsection
