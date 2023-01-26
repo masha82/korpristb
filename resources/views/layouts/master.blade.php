@@ -31,11 +31,11 @@
     <!-- Document Title
     ============================================= -->
     @yield('title')
-<style>
-    .testimonial.testimonial-full .flex-control-nav {
-        margin-top: 0px;
-    }
-</style>
+    <style>
+        .testimonial.testimonial-full .flex-control-nav {
+            margin-top: 0px;
+        }
+    </style>
 </head>
 
 <body class="stretched">
@@ -44,7 +44,7 @@
 ============================================= -->
     <div id="wrapper" class="clearfix">
         <div class="fslider testimonial testimonial-full" data-animation="fade" data-arrows="false"
-        style="padding:0px!important">
+            style="padding:0px!important">
             <div class="flexslider" style="height: 221px;">
                 <div class="slider-wrap">
                     <div class="slide" data-thumb-alt=""
@@ -183,28 +183,79 @@
     ============================================= -->
         <section id="content">
 
-            <div class="content-wrap p-0">
+            <div class="content-wrap p-0 mb-4">
                 @yield('content')
             </div>
-
-        </section><!-- #content end -->
+        </section>
 
         <!-- Footer
-    ============================================= -->
-        <footer id="footer" class="border-0" style="background-color: #C9D6CF;">
+		============================================= -->
+		<footer id="footer" class="dark">
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
 
-            <div class="container">
-                <div class="footer-widgets-wrap  m-0">
+					<div class="row col-mb-30">
 
-                    <div class="row justify-content-between">
+						<div class="col-md-6 text-center text-md-start">
+							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+						</div>
 
-                    </div>
+						<div class="col-md-6 text-center text-md-end">
+							<div class="d-flex justify-content-center justify-content-md-end">
+								<a href="#" class="social-icon si-small si-borderless si-facebook">
+									<i class="icon-facebook"></i>
+									<i class="icon-facebook"></i>
+								</a>
 
-                </div>
-            </div>
+								<a href="#" class="social-icon si-small si-borderless si-twitter">
+									<i class="icon-twitter"></i>
+									<i class="icon-twitter"></i>
+								</a>
 
-        </footer><!-- #footer end -->
+								<a href="#" class="social-icon si-small si-borderless si-gplus">
+									<i class="icon-gplus"></i>
+									<i class="icon-gplus"></i>
+								</a>
 
+								<a href="#" class="social-icon si-small si-borderless si-pinterest">
+									<i class="icon-pinterest"></i>
+									<i class="icon-pinterest"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-vimeo">
+									<i class="icon-vimeo"></i>
+									<i class="icon-vimeo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-github">
+									<i class="icon-github"></i>
+									<i class="icon-github"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-yahoo">
+									<i class="icon-yahoo"></i>
+									<i class="icon-yahoo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small si-borderless si-linkedin">
+									<i class="icon-linkedin"></i>
+									<i class="icon-linkedin"></i>
+								</a>
+							</div>
+
+							<div class="clear"></div>
+
+							<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+						</div>
+
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
     </div><!-- #wrapper end -->
 </body>
 <!-- Go To Top
