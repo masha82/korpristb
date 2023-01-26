@@ -44,8 +44,12 @@ class RegulasiController extends Controller
      */
     public function store(Request $request)
     {
-
-        $data = Regulasi::create($request->all());
+        $data = $request->all();
+        $file = $request->file('dokumen');
+        $new_dokum = rand() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path("dokhukum"), $new_dokum);
+        $data['dokumen'] = $new_dokum;
+        $data = Regulasi::create($data);
         return redirect()->back()->with(['success' => 'Data berhasil disimpan.']);
     }
 
