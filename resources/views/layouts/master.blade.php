@@ -70,7 +70,7 @@
                     <nav class="primary-menu">
 
                         <ul class="menu-container">
-                            <li class="menu-item"><a class="menu-link" href="{{url('beranda')}}">
+                            <li class="menu-item"><a class="menu-link" href="{{url('/')}}">
                                 <div>Beranda</div>
                             </a></li>   
                             <li class="menu-item"><a class="menu-link" href="#">
