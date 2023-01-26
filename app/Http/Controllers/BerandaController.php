@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Models\Galeri;
 use Illuminate\Http\Request;
 
 class BerandaController extends Controller
@@ -15,7 +16,8 @@ class BerandaController extends Controller
     public function index()
     {
         $berita = Berita::all();
-        return view('welcome',compact('berita'));
+        $galeri = Galeri::all();
+        return view('welcome',compact('berita','galeri'));
     }
 
     /**

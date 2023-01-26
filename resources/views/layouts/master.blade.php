@@ -92,7 +92,7 @@
                         <nav class="primary-menu">
 
                             <ul class="menu-container">
-                                <li class="menu-item"><a class="menu-link" href="{{ url('beranda') }}">
+                                <li class="menu-item"><a class="menu-link" href="{{ url('/') }}">
                                         <div>Beranda</div>
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="#">
@@ -124,7 +124,7 @@
                                         <div>Kegiatan BANSOS</div>
                                     </a></li>
 
-                                <li class="menu-item"><a class="menu-link" href="{{ url('galeri') }}">
+                                <li class="menu-item"><a class="menu-link" href="{{ url('galerifoto') }}">
                                         <div>Galeri</div>
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="{{ url('pengumuman') }}">
@@ -199,8 +199,9 @@
 					<div class="row col-mb-30">
 
 						<div class="col-md-6 text-center text-md-start">
-							Copyrights &copy; 2020 All Rights Reserved by Canvas Inc.<br>
-							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+							Copyrights &copy; 2023<br>
+                             Dinas Komunikasi dan Informatika Kabupaten Situbondo<br>
+							
 						</div>
 
 						<div class="col-md-6 text-center text-md-end">
@@ -248,7 +249,10 @@
 
 							<div class="clear"></div>
 
-							<i class="icon-envelope2"></i> info@canvas.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="icon-skype2"></i> CanvasOnSkype
+							<i class="icon-envelope2"></i> korpri@gmail.com <br>
+                            <span class="middot"></span> 
+                            <i class="icon-headphones"></i> +62 811-1111-111 <br>
+                            <span class="middot"></span> <i class="icon-office"></i> Jalan PB. Sudirman, Situbondo
 						</div>
 
 					</div>

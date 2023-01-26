@@ -36,7 +36,7 @@ Route::get('/kegiatanbansos', function () {
     return view('bansos');
 });
 
-Route::get('/galeri', function () {
+Route::get('/galerifoto', function () {
     return view('galeri');
 });
 

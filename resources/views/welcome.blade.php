@@ -25,14 +25,13 @@
                     <div class="mx-auto" style="max-width: 600px">
                         <p class="lead fw-normal text-dark mb-5">Korps Pegawai Republik Indonesia atau biasa dikenal KORPRI
                             berdiri berdasarkan Keputusan Presiden Nomor 82 Tahun 1971,<br> 29 November 1971. </p>
-                        <a href="demo-freelancer-works.html"
-                            class="button button-dark button-hero h-translatey-3 tf-ts button-reveal overflow-visible bg-dark text-end"><span>Selengkapnya</span><i
-                                class="icon-line-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- #section 1 -->
     <section id="content">
         <div class="container clearfix">
 
@@ -58,6 +57,36 @@
                                         <li><i class="icon-calendar3"></i> {{\Carbon\Carbon::parse($item->created_at)->isoFormat("dddd, D MMMM Y")}}</li>
                                     </ul>
                                 </div>
+                            </div>
+                        </div>
+                        @endforeach
+                       
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- #section 2 -->
+    <section id="content">
+        <div class="container clearfix">
+
+            <div class="row col-mb-50">
+                <div class="col-12">
+
+                    <div class="fancy-title title-border title-center">
+                        <h3>Galeri Foto Kegiatan</h3>
+                    </div>
+
+                    <div class="row posts-md col-mb-30 mb-4">
+                        @foreach ($galeri as $item)
+                        <div class="entry col-sm-6 col-lg-3">
+                            <div class="grid-inner">
+                                <div class="entry-image">
+                                    <a href="#"><img src="{{ asset('galeri/'.$item->file) }}" alt="Image"></a>
+                                </div>
+                                
                             </div>
                         </div>
                         @endforeach
