@@ -18,8 +18,8 @@ class RegulasiController extends Controller
         if ($request->ajax()) {
             return DataTables::of(Regulasi::query())
             ->addColumn('action', function ($data) {
-                $del = '<a href="#" data-id="' . $data->id . '" class="btn btn-danger hapus-data"><i class="fa fa-download"></i></a>';
-                return $edit . '&nbsp' . $del;
+                $del = '<a href="#" data-id="' . $data->id . '" class="btn btn-primary hapus-data">Unduh</a>';
+                return $del;
             })
             ->make(true);
         }
