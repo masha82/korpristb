@@ -59,11 +59,10 @@
         </div>
         <!-- Header
     ============================================= -->
-        <header id="header" class="border-bottom-0 no-sticky transparent-header">
+        <header id="header" class="border-bottom-0 no-sticky transparent-header" data-sticky-shrink="false">
             <div id="header-wrap">
                 <div class="container">
-                    <div class="header-row">
-
+                    <div class="header-row flex-row-reverse flex-lg-row justify-content-between">
                         <!-- Logo
                     ============================================= -->
                         <div id="logo">
