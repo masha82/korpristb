@@ -38,7 +38,7 @@
     <div class="container">
 
         <div class="row border-between">
-            <div class="col-lg-7 mb-5 mb-lg-0">
+            <div class="col-lg-8 mb-5 mb-lg-0">
 
                 <article class="entry border-bottom-0 mb-0">
                     <div class="entry-image">
@@ -58,94 +58,37 @@
                         </ul>
                     </div>
                     <div class="entry-content">
-                        {!!$berita->first()->isi!!}
+                        {!! $berita->first()->isi !!}
                     </div>
                 </article>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                 <h3 class="font-secondary fw-medium mb-4 h4">Berita Terbaru</h3>
                 <div class="row posts-md col-mb-30">
-                    <article class="entry col-12">
-                        <div class="grid-inner row gutter-20">
-                            <div class="col-md-4">
-                                <a class="entry-image" href="demo-blog-single.html"><img src="demos/blog/images/hero/2.jpg"
-                                        alt="Image"></a>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="entry-title title-xs">
-                                    <div class="entry-categories"><a href="demo-blog-categories.html">Market</a></div>
-                                    <h3><a href="demo-blog-single.html" class="stretched-link color-underline">What
-                                            Everyone’s Getting Wrong About the Toilet Paper Shortage</a></h3>
+                    @foreach ($berita->take(5) as $item)
+                        <article class="entry col-12">
+                            <div class="grid-inner row gutter-20">
+                                <div class="col-md-4">
+                                    <a class="entry-image" href="#"><img src="{{ asset('gambar/' . $item->file) }}"
+                                            alt="Image"></a>
                                 </div>
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li><a href="#">Mar 11, 2016</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="entry col-12">
-                        <div class="grid-inner row gutter-20">
-                            <div class="col-md-4">
-                                <a class="entry-image" href="demo-blog-single.html"><img src="demos/blog/images/hero/3.jpg"
-                                        alt="Image"></a>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="entry-title title-xs">
-                                    <div class="entry-categories"><a href="demo-blog-categories.html">Tech</a></div>
-                                    <h3><a href="demo-blog-single.html" class="stretched-link color-underline">Designing an
-                                            e-commerce site for a Cloth store — a UI/UX case</a></h3>
-                                </div>
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li><a href="#">Mar 11, 2016</a></li>
-                                    </ul>
+                                <div class="col-md-8">
+                                    <div class="entry-title title-xs">
+                                        {{-- <div class="entry-categories"><a href="demo-blog-categories.html">Market</a></div> --}}
+                                        <h3><a href="demo-blog-single.html"
+                                                class="stretched-link color-underline">{{ $item->judul }}</a></h3>
+                                    </div>
+                                    <div class="entry-meta">
+                                        <ul>
+                                            <li><a
+                                                    href="#">{{ \Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y') }}</a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </article>
-                    <article class="entry col-12">
-                        <div class="grid-inner row gutter-20">
-                            <div class="col-md-4">
-                                <a class="entry-image" href="demo-blog-single.html"><img src="demos/blog/images/hero/4.jpg"
-                                        alt="Image"></a>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="entry-title title-xs">
-                                    <div class="entry-categories"><a href="demo-blog-categories.html">Food</a></div>
-                                    <h3><a href="demo-blog-single.html" class="stretched-link color-underline">The Path: “I
-                                            stayed loyal to those who gave me opportunities, and tried to remain humble
-                                            every step of the way.”</a></h3>
-                                </div>
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li><a href="#">Mar 11, 2016</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="entry col-12">
-                        <div class="grid-inner row gutter-20">
-                            <div class="col-md-4">
-                                <a class="entry-image" href="demo-blog-single.html"><img src="demos/blog/images/hero/5.jpg"
-                                        alt="Image"></a>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="entry-title title-xs">
-                                    <div class="entry-categories"><a href="demo-blog-categories.html">Tech</a></div>
-                                    <h3><a href="demo-blog-single.html" class="stretched-link color-underline">Adobe XD:
-                                            putting auto-animate to the test</a></h3>
-                                </div>
-                                <div class="entry-meta">
-                                    <ul>
-                                        <li><a href="#">Mar 11, 2016</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                        </article>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -158,8 +101,8 @@
                 <div class="col-lg-6">
                     <div class="widget subscribe-widget" data-loader="button">
                         <div class="widget-subscribe-form-result"></div>
-                        <form id="widget-subscribe-form" action="include/subscribe.php" method="post"
-                            class="mb-0 d-flex" novalidate="novalidate">
+                        <form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0 d-flex"
+                            novalidate="novalidate">
                             <input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email"
                                 class="form-control form-control-lg not-dark required email"
                                 placeholder="Your Email Address">
@@ -179,24 +122,24 @@
         </div>
         <div class="row posts-md col-mb-30">
             <div class="masonry-thumbs grid-container grid-6 has-init-isotope" data-big="3" data-lightbox="gallery"
-            style="position: relative; height: 295.664px;">
-            @foreach ($galeri as $item)
-            <a class="grid-item" href="{{ asset('galeri/' . $item->file) }}" data-lightbox="gallery-item"
-                style="position: absolute; left: 0%; top: 0px;">
-                <div class="grid-inner">
-                    <img src="{{ asset('galeri/' . $item->file) }}" alt="Gallery">
-                    <div class="bg-overlay">
-                        <div class="bg-overlay-content dark">
-                            <i class="icon-line-plus h4 mb-0 animated fadeOut" data-hover-animate="fadeIn"
-                                style="animation-duration: 600ms;"></i>
+                style="position: relative; height: 295.664px;">
+                @foreach ($galeri as $item)
+                    <a class="grid-item" href="{{ asset('galeri/' . $item->file) }}" data-lightbox="gallery-item"
+                        style="position: absolute; left: 0%; top: 0px;">
+                        <div class="grid-inner">
+                            <img src="{{ asset('galeri/' . $item->file) }}" alt="Gallery">
+                            <div class="bg-overlay">
+                                <div class="bg-overlay-content dark">
+                                    <i class="icon-line-plus h4 mb-0 animated fadeOut" data-hover-animate="fadeIn"
+                                        style="animation-duration: 600ms;"></i>
+                                </div>
+                                <div class="bg-overlay-bg dark animated fadeOut" data-hover-animate="fadeIn"
+                                    style="animation-duration: 600ms;"></div>
+                            </div>
                         </div>
-                        <div class="bg-overlay-bg dark animated fadeOut" data-hover-animate="fadeIn"
-                            style="animation-duration: 600ms;"></div>
-                    </div>
-                </div>
-            </a>
-            @endforeach
-        </div>
+                    </a>
+                @endforeach
+            </div>
         </div>
     </div>
     <div class="section dark">
@@ -292,27 +235,7 @@
                                 </div>
                             </div>
                         </article>
-                        <article class="entry col-12">
-                            <div class="grid-inner row gutter-20">
-                                <div class="col-md-4">
-                                    <a class="entry-image" href="demo-blog-single.html"><img
-                                            src="demos/blog/images/hero/5.jpg" alt="Image"></a>
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="entry-title title-xs">
-                                        <div class="entry-categories"><a href="demo-blog-categories.html">Sports</a></div>
-                                        <h3><a href="demo-blog-single.html"
-                                                class="stretched-link color-underline">Designing an e-commerce site for a
-                                                Cloth store — a UI/UX case</a></h3>
-                                    </div>
-                                    <div class="entry-meta">
-                                        <ul>
-                                            <li><a href="#">Mar 11, 2016</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+                      
                     </div>
                 </div>
             </div>

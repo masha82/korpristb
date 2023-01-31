@@ -15,8 +15,8 @@ class BerandaController extends Controller
      */
     public function index()
     {
-        $berita = Berita::all();
-        $galeri = Galeri::all();
+        $berita = Berita::orderBy('created_at', 'DESC')->get();
+        $galeri = Galeri::orderBy('created_at', 'DESC')->get();
         return view('welcome',compact('berita','galeri'));
     }
 
