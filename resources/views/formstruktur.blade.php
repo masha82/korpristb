@@ -14,7 +14,7 @@
                         </div>
                     @endif
                     <div class="col-lg-6">
-                        <form class="row" action="{{ route('structure.store') }}" method="post"
+                        <form class="row" action="{{ route('strukturorg.store') }}" method="post"
                             enctype="multipart/form-data">
                             @csrf
                             @method('POST')
@@ -31,7 +31,7 @@
                             </div>
                         </form>
                     </div>
-                    
+
                 </div>
             </div>
         </div>

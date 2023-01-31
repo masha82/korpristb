@@ -21,9 +21,6 @@ Route::get('/visi', function () {
 });
 
 
-Route::get('/strukturorg', function () {
-    return view('struktur');
-});
 
 Route::get('/layanankorpri', function () {
     return view('layanan');
@@ -83,5 +80,5 @@ Route::resource('gallery', \App\Http\Controllers\GaleriController::class);
 Route::resource('layanan', \App\Http\Controllers\LayananController::class);
 Route::resource('info', \App\Http\Controllers\PengumumanController::class);
 Route::resource('hukum', \App\Http\Controllers\RegulasiController::class);
-Route::resource('structure', \App\Http\Controllers\StrukturController::class);
+Route::resource('strukturorg', \App\Http\Controllers\StrukturController::class);
 Route::resource('regulasi', \App\Http\Controllers\RegulasiController::class);

@@ -14,7 +14,8 @@ class StrukturController extends Controller
      */
     public function index()
     {
-        //
+        $struktur = Struktur::first();
+        return view('struktur', compact('struktur'));
     }
 
     /**
