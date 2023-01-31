@@ -77,7 +77,7 @@ Route::resource('services', \App\Http\Controllers\JenisLayananController::class)
 Route::resource('news', \App\Http\Controllers\BeritaController::class);
 Route::resource('bansos', \App\Http\Controllers\BansosController::class);
 Route::resource('gallery', \App\Http\Controllers\GaleriController::class);
-Route::resource('layanan', \App\Http\Controllers\LayananController::class);
+Route::resource('fotolayanan', \App\Http\Controllers\LayananController::class);
 Route::resource('info', \App\Http\Controllers\PengumumanController::class);
 Route::resource('hukum', \App\Http\Controllers\RegulasiController::class);
 Route::resource('strukturorg', \App\Http\Controllers\StrukturController::class);
