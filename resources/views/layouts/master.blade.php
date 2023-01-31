@@ -18,18 +18,16 @@
 
     <!-- Freelancer Demo Specific Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/demos/freelancer/css/fonts.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('assets/demos/freelancer/freelancer.css') }}" type="text/css" />
+    {{-- <link rel="stylesheet" href="{{ asset('assets/demos/freelancer/freelancer.css') }}" type="text/css" /> --}}
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <link rel="stylesheet" href="{{ asset('assets/css/colors.php?color=f7c25e') }}" type="text/css" />
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css//colors.php?color=f7c25e') }}" type="text/css" /> --}}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
     <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css" />
     @stack('css')
-    <!-- Document Title
-    ============================================= -->
     @yield('title')
     <style>
         .testimonial.testimonial-full .flex-control-nav {
@@ -88,9 +86,9 @@
 
                         <!-- Primary Navigation
                     ============================================= -->
-                        <nav class="primary-menu">
+                        <nav class="primary-menu with-arrows">
 
-                            <ul class="menu-container">
+                            <ul class="menu-container justify-content-between">
                                 <li class="menu-item"><a class="menu-link" href="{{ url('/') }}">
                                         <div>Beranda</div>
                                     </a></li>
@@ -166,7 +164,8 @@
                                         <li class="menu-item"><a class="menu-link"
                                                 href="{{ url('formpengumuman') }}">
                                                 <div>Form Pengumuman</div>
-                                            </a></li>
+                                            </a>
+                                        </li>
                                     </ul>
                         </nav><!-- #primary-menu end -->
 
@@ -188,77 +187,77 @@
         </section>
 
         <!-- Footer
-		============================================= -->
-		<footer id="footer" class="dark">
-			<!-- Copyrights
-			============================================= -->
-			<div id="copyrights">
-				<div class="container">
+  ============================================= -->
+        <footer id="footer" class="dark">
+            <!-- Copyrights
+   ============================================= -->
+            <div id="copyrights">
+                <div class="container">
 
-					<div class="row col-mb-30">
+                    <div class="row col-mb-30">
 
-						<div class="col-md-6 text-center text-md-start">
-							Copyrights &copy; 2023<br>
-                             Dinas Komunikasi dan Informatika Kabupaten Situbondo<br>
-							
-						</div>
+                        <div class="col-md-6 text-center text-md-start">
+                            Copyrights &copy; 2023<br>
+                            Dinas Komunikasi dan Informatika Kabupaten Situbondo<br>
 
-						<div class="col-md-6 text-center text-md-end">
-							<div class="d-flex justify-content-center justify-content-md-end">
-								<a href="#" class="social-icon si-small si-borderless si-facebook">
-									<i class="icon-facebook"></i>
-									<i class="icon-facebook"></i>
-								</a>
+                        </div>
 
-								<a href="#" class="social-icon si-small si-borderless si-twitter">
-									<i class="icon-twitter"></i>
-									<i class="icon-twitter"></i>
-								</a>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="d-flex justify-content-center justify-content-md-end">
+                                <a href="#" class="social-icon si-small si-borderless si-facebook">
+                                    <i class="icon-facebook"></i>
+                                    <i class="icon-facebook"></i>
+                                </a>
 
-								<a href="#" class="social-icon si-small si-borderless si-gplus">
-									<i class="icon-gplus"></i>
-									<i class="icon-gplus"></i>
-								</a>
+                                <a href="#" class="social-icon si-small si-borderless si-twitter">
+                                    <i class="icon-twitter"></i>
+                                    <i class="icon-twitter"></i>
+                                </a>
 
-								<a href="#" class="social-icon si-small si-borderless si-pinterest">
-									<i class="icon-pinterest"></i>
-									<i class="icon-pinterest"></i>
-								</a>
+                                <a href="#" class="social-icon si-small si-borderless si-gplus">
+                                    <i class="icon-gplus"></i>
+                                    <i class="icon-gplus"></i>
+                                </a>
 
-								<a href="#" class="social-icon si-small si-borderless si-vimeo">
-									<i class="icon-vimeo"></i>
-									<i class="icon-vimeo"></i>
-								</a>
+                                <a href="#" class="social-icon si-small si-borderless si-pinterest">
+                                    <i class="icon-pinterest"></i>
+                                    <i class="icon-pinterest"></i>
+                                </a>
 
-								<a href="#" class="social-icon si-small si-borderless si-github">
-									<i class="icon-github"></i>
-									<i class="icon-github"></i>
-								</a>
+                                <a href="#" class="social-icon si-small si-borderless si-vimeo">
+                                    <i class="icon-vimeo"></i>
+                                    <i class="icon-vimeo"></i>
+                                </a>
 
-								<a href="#" class="social-icon si-small si-borderless si-yahoo">
-									<i class="icon-yahoo"></i>
-									<i class="icon-yahoo"></i>
-								</a>
+                                <a href="#" class="social-icon si-small si-borderless si-github">
+                                    <i class="icon-github"></i>
+                                    <i class="icon-github"></i>
+                                </a>
 
-								<a href="#" class="social-icon si-small si-borderless si-linkedin">
-									<i class="icon-linkedin"></i>
-									<i class="icon-linkedin"></i>
-								</a>
-							</div>
+                                <a href="#" class="social-icon si-small si-borderless si-yahoo">
+                                    <i class="icon-yahoo"></i>
+                                    <i class="icon-yahoo"></i>
+                                </a>
 
-							<div class="clear"></div>
+                                <a href="#" class="social-icon si-small si-borderless si-linkedin">
+                                    <i class="icon-linkedin"></i>
+                                    <i class="icon-linkedin"></i>
+                                </a>
+                            </div>
 
-							<i class="icon-envelope2"></i> korpri@gmail.com <br>
-                            <span class="middot"></span> 
+                            <div class="clear"></div>
+
+                            <i class="icon-envelope2"></i> korpri@gmail.com <br>
+                            <span class="middot"></span>
                             <i class="icon-headphones"></i> +62 811-1111-111 <br>
                             <span class="middot"></span> <i class="icon-office"></i> Jalan PB. Sudirman, Situbondo
-						</div>
+                        </div>
 
-					</div>
+                    </div>
 
-				</div>
-			</div><!-- #copyrights end -->
-		</footer><!-- #footer end -->
+                </div>
+            </div><!-- #copyrights end -->
+        </footer><!-- #footer end -->
     </div><!-- #wrapper end -->
 </body>
 <!-- Go To Top
