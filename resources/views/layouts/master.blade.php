@@ -107,7 +107,7 @@
                                             </a>
                                         </li>
                                         <li class="menu-item" style="">
-                                            <a class="menu-link" href="{{ url('struktur') }}">
+                                            <a class="menu-link" href="{{ url('strukturorg') }}">
                                                 <div>Struktur Organisasi</div>
                                             </a>
                                         </li>

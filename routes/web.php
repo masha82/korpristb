@@ -21,7 +21,7 @@ Route::get('/visi', function () {
 });
 
 
-Route::get('/struktur', function () {
+Route::get('/strukturorg', function () {
     return view('struktur');
 });
 
