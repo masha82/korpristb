@@ -97,7 +97,7 @@
         <div class="container">
             <div class="d-flex justify-content-between">
                 <h3 class="font-secondary fw-medium m-0">Galeri</h3>
-                <a href="#" class="btn btn-sm btn-outline-secondary">Lihat lebih banyak <i
+                <a href="{{route('gallery.index')}}" class="btn btn-sm btn-outline-secondary">Lihat lebih banyak <i
                         class="icon-line-arrow-right"></i></a>
             </div>
             <hr class="text-dark">

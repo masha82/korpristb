@@ -1,4 +1,5 @@
 @extends('layouts.master')
+
 @section('title')
     <title>LAYANAN KORPRI</title>
 @endsection
@@ -6,56 +7,50 @@
     <div class="row">
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
-                <div class="heading-block mx-auto" style="max-width: 700px">
-                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">LAYANAN KORPRI</h2><br>
-                    <h4 class="gradient-text center gradient-horizon">LAYANAN BANTUAN KORPRI KABUPATEN SITUBONDO </h4>
+                <div class="mx-auto" style="max-width: 700px">
+                    <h2 class="nott center ls0 gradient-text gradient-horizon">LAYANAN KORPRI</h2>
+                    <h6 class="text-dark text-center">LAYANAN BANTUAN KORPRI KABUPATEN SITUBONDO </h6>
                 </div>
-                <div class="col-md-4">
-                    <img src="{{ asset('layanan.png') }}" alt="FAQs" class="px-5 mt-4">
+                <div class="row">
+                    <img src="{{ asset('layanan/' . $layanan->file) }}" alt="FAQs" class="px-5 mt-4">
                 </div>
-                <div>
-                    <table class="table table-hover">
-                        <thead>
-                        <tr>
-                        <th>NO</th>
-                        <th>LAYANAN</th>
-                        <th>INFORMASI</th>
-                        <th>MEKANISME</th>
-                        <th>SYARAT</th>
-                        <th>KETERANGAN</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Layanan</td>
-                            <td>Informasi</td>
-                            <td>Mekanisme</td>
-                            <td>Syarat</td>
-                            <td>Keterangan</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Layanan</td>
-                            <td>Informasi</td>
-                            <td>Mekanisme</td>
-                            <td>Syarat</td>
-                            <td>Keterangan</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Layanan</td>
-                            <td>Informasi</td>
-                            <td>Mekanisme</td>
-                            <td>Syarat</td>
-                            <td>Keterangan</td>
-                        </tr>
-                        </tbody>
-                        </table>
-                </div>
-
             </div>
         </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="container topmargin bottommargin-lg">
+                <div class="tabs side-tabs responsive-tabs clearfix" id="tab-4">
 
+                    <ul class="tab-nav clearfix">
+                        @foreach ($jenis as $item)
+                            <li><a href="#tabs-{{ $item->id }}">{{ $item->nama }}</a></li>
+                        @endforeach
+                    </ul>
+
+                    <div class="tab-container">
+                        @foreach ($jenis as $content)
+                            <div class="tab-content clearfix" id="tabs-{{ $content->id }}">
+                                <div class="col-md-12">
+                                    <h4 id="faq-1"><strong>A.</strong> Informasi</h4>
+                                    {!! $content->informasi !!}
+                                    <div class="line"></div>
+                                    <h4 id="faq-1"><strong>B.</strong> Mekanisme</h4>
+                                    {!! $content->mekanisme !!}
+                                    <div class="line"></div>
+                                    <h4 id="faq-1"><strong>C.</strong> Syarat</h4>
+                                    {!! $content->syarat !!}
+                                    <div class="line"></div>
+                                    <h4 id="faq-1"><strong>D.</strong> Keterangan</h4>
+                                    {!! $content->keterangan !!}
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 @endsection

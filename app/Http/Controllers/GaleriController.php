@@ -14,7 +14,8 @@ class GaleriController extends Controller
      */
     public function index()
     {
-        //
+        $galeri = Galeri::orderBy('created_at','DESC')->get();
+        return view('galeri', compact('galeri'));
     }
 
     /**

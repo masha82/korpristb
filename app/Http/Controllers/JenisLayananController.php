@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\JenisLayanan;
+use App\Models\Layanan;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class JenisLayananController extends Controller
 {
@@ -12,9 +14,11 @@ class JenisLayananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $layanan = Layanan::orderBy('created_at','DESC')->first();
+        $jenis = JenisLayanan::orderBy('created_at','DESC')->get();
+        return view('layanan', compact('layanan', 'jenis'));
     }
 
     /**

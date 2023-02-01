@@ -14,7 +14,8 @@ class PengumumanController extends Controller
      */
     public function index()
     {
-        //
+        $info = Pengumuman::orderBy('updated_at','DESC')->paginate(10);
+        return view('pengumuman',compact('info'));
     }
 
     /**

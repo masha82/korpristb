@@ -114,17 +114,17 @@
 
                                     </ul>
                                 </li>
-                                <li class="menu-item"><a class="menu-link" href="{{ url('layanankorpri') }}">
+                                <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
                                         <div>Layanan KORPRI</div>
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="{{ url('kegiatanbansos') }}">
                                         <div>Kegiatan BANSOS</div>
                                     </a></li>
 
-                                <li class="menu-item"><a class="menu-link" href="{{ url('galerifoto') }}">
+                                <li class="menu-item"><a class="menu-link" href="{{ route('gallery.index') }}">
                                         <div>Galeri</div>
                                     </a></li>
-                                <li class="menu-item"><a class="menu-link" href="{{ url('pengumuman') }}">
+                                <li class="menu-item"><a class="menu-link" href="{{ route('info.index') }}">
                                         <div>Pengumuman</div>
                                     </a></li>
 

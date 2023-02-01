@@ -14,7 +14,7 @@ class StrukturController extends Controller
      */
     public function index()
     {
-        $struktur = Struktur::first();
+        $struktur = Struktur::orderBy('created_at','DESC')->first();
         return view('struktur', compact('struktur'));
     }
 
