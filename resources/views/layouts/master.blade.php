@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="SemiColonWeb" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Stylesheets
     ============================================= -->
     <link href="http://fonts.googleapis.com/css?family=Heebo:300,400,500,700,900" rel="stylesheet" type="text/css" />
@@ -156,14 +157,15 @@
                                                 <div>Form Foto Layanan KORPRI</div>
                                             </a></li>
                                         <li class="menu-item"><a class="menu-link"
-                                                href="{{ url('formkegbansos') }}">
+                                                href="{{ route('bansos.create') }}">
                                                 <div>Form Kegiatan BANSOS</div>
                                             </a></li>
-                                        <li class="menu-item"><a class="menu-link" href="{{ url('formgaleri') }}">
+                                        <li class="menu-item"><a class="menu-link"
+                                                href="{{ route('gallery.create') }}">
                                                 <div>Form Galeri</div>
                                             </a></li>
                                         <li class="menu-item"><a class="menu-link"
-                                                href="{{ url('formpengumuman') }}">
+                                                href="{{ route('info.create') }}">
                                                 <div>Form Pengumuman</div>
                                             </a>
                                         </li>
@@ -281,4 +283,11 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 <script src="https://unpkg.com/gijgo@1.9.14/js/gijgo.min.js" type="text/javascript"></script>
+<script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+</script>
 @stack('js')

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\KegiatanBansos;
+use App\Traits\Table;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -14,6 +15,8 @@ class BansosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    use Table;
+    protected $model = KegiatanBansos::class;
     public function index(Request $request)
     {
         if ($request->ajax()) {
@@ -33,7 +36,7 @@ class BansosController extends Controller
      */
     public function create()
     {
-        //
+        return view('formkegbansos');
     }
 
     /**
@@ -89,8 +92,5 @@ class BansosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+
 }

@@ -11,7 +11,9 @@
                     <h4 class="text-dark">STRUKTUR ORGANISASI KORPRI KABUPATEN SITUBONDO </h4>
                 </div>
                 <div class="row">
+                    @if (!empty($struktur->file))
                     <img src="{{ asset('struktur/' . $struktur->file) }}" alt="Image">
+                    @endif
                 </div>
             </div>
         </div>
