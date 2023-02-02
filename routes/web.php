@@ -20,7 +20,7 @@ Route::get('/visi', function () {
     return view('visi');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 // tabel
 Route::get('/news/data', [App\Http\Controllers\BeritaController::class, 'anyData'])->name('news.data');
 Route::get('/regulasi/data', [App\Http\Controllers\RegulasiController::class, 'anyData'])->name('regulasi.data');
