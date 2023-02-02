@@ -23,6 +23,10 @@
                                 <input type="text"  name="tgl_keg" id="tgl_keg" class="form-control datepicker">
                             </div>
                             <div class="col-12 form-group">
+                                <label>Tempat:</label>
+                                <input type="text" name="tempat" id="tempat" class="form-control">
+                            </div>
+                            <div class="col-12 form-group">
                                 <label>Keterangan:</label>
                                 <input type="text" name="keterangan" id="keterangan" class="form-control">
                             </div>

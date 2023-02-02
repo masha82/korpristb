@@ -7,9 +7,8 @@
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="mx-auto" style="max-width: 700px">
-                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">PENGUMUMAN KORPRI</h2>
-                    <h4 class="gradient-text center gradient-horizon">INFORMASI/PENGUMUMAN TERKAIT KORPRI KABUPATEN SITUBONDO
-                    </h4>
+                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">BERITA KORPRI</h2>
+                    
                 </div>
             </div>
         </div>
@@ -19,12 +18,12 @@
         <div class="row gutter-40 col-mb-80">
             <div class="postcontent col-lg-12">
                 <div id="posts" class="row gutter-40 mb-0">
-                    @foreach ($info as $item)
+                    @foreach ($data as $item)
                         <div class="entry col-12 mt-0 mb-0">
                             <div class="grid-inner row g-0">
                                 <div class="col-md-4">
                                     <a class="entry-image" href="#" data-lightbox="image"><img
-                                            src="{{ asset('screenshot/' . $item->thumbnail) }}"
+                                            src="{{ asset('gambar/' . $item->file) }}"
                                             alt="Standard Post with Image"></a>
                                 </div>
                                 <div class="col-md-8 ps-md-4">
@@ -36,7 +35,7 @@
                                             <li><i class="icon-calendar3"></i>
                                                 {{ \Carbon\Carbon::parse($item->created_at)->isoFormat('dddd, D MMMM Y') }}
                                             </li>
-                                            <li><i class="icon-user"></i> {{ $item->sumber }}</li>
+                                            <li><i class="icon-user"></i> {{ $item->editor }}</li>
                                             <li><i class="icon-folder-open"></i> <a
                                                     href="#">{{ $item->kategori }}</a>
                                             </li>
@@ -53,7 +52,7 @@
                 </div>
                 <div class="row mb-3">
                     <div class="col-12">
-                        {{ $info->links('layouts.paginate') }}
+                        {{ $data->links('layouts.paginate') }}
                     </div>
                 </div>
 

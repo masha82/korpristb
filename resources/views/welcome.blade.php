@@ -90,7 +90,9 @@
                         </article>
                     @endforeach
                 </div>
-            </div>
+               
+            </div> <a href="{{route('news.index')}}" class="btn btn-sm btn-outline-secondary">Berita lainnya <i
+                class="icon-line-arrow-right"></i></a>
         </div>
     </div>
     <div class="section">

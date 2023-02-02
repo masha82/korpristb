@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Berita;
+use App\Traits\Table;
 use Illuminate\Http\Request;
 
 class BeritaController extends Controller
@@ -12,9 +13,13 @@ class BeritaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    use Table;
+    protected $model= Berita::class;
+
     public function index()
     {
-        //
+        $data = Berita::paginate(10);
+        return view('news', compact('data'));
     }
 
     /**
@@ -24,7 +29,7 @@ class BeritaController extends Controller
      */
     public function create()
     {
-        //
+        return view('formberita');
     }
 
     /**
@@ -84,8 +89,5 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
+   
 }

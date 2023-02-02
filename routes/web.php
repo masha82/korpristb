@@ -20,19 +20,6 @@ Route::get('/visi', function () {
     return view('visi');
 });
 
-
-Route::get('/kegiatanbansos', function () {
-    return view('bansos');
-});
-
-Route::get('/formjenislayanan', function () {
-    return view('formjenislayanan');
-});
-
-Route::get('/formberita', function () {
-    return view('formberita');
-});
-
 Route::get('/formgaleri', function () {
     return view('formgaleri');
 });
@@ -41,16 +28,8 @@ Route::get('/formkegbansos', function () {
     return view('formkegbansos');
 });
 
-Route::get('/formlayanan', function () {
-    return view('formlayanan');
-});
-
 Route::get('/formpengumuman', function () {
     return view('formpengumuman');
-});
-
-Route::get('/formregulasi', function () {
-    return view('formregulasi');
 });
 
 Route::get('/formstruktur', function () {
@@ -58,13 +37,20 @@ Route::get('/formstruktur', function () {
 });
 
 Auth::routes();
+// tabel
+Route::get('/news/data', [App\Http\Controllers\BeritaController::class, 'anyData'])->name('news.data');
+Route::get('/regulasi/data', [App\Http\Controllers\RegulasiController::class, 'anyData'])->name('regulasi.data');
+Route::get('/strukturorg/data', [App\Http\Controllers\StrukturController::class, 'anyData'])->name('strukturorg.data');
+Route::get('/services/data', [App\Http\Controllers\JenisLayananController::class, 'anyData'])->name('services.data');
+Route::get('/fotolayanan/data', [App\Http\Controllers\LayananController::class, 'anyData'])->name('fotolayanan.data');
 
+//resources
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('services', \App\Http\Controllers\JenisLayananController::class);
 Route::resource('news', \App\Http\Controllers\BeritaController::class);
 Route::resource('bansos', \App\Http\Controllers\BansosController::class);
 Route::resource('gallery', \App\Http\Controllers\GaleriController::class);
-Route::resource('layanan', \App\Http\Controllers\LayananController::class);
+Route::resource('fotolayanan', \App\Http\Controllers\LayananController::class);
 Route::resource('info', \App\Http\Controllers\PengumumanController::class);
 Route::resource('hukum', \App\Http\Controllers\RegulasiController::class);
 Route::resource('strukturorg', \App\Http\Controllers\StrukturController::class);

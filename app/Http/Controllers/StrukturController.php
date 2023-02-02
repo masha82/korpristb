@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Struktur;
+use App\Traits\Table;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class StrukturController extends Controller
 {
@@ -12,9 +14,11 @@ class StrukturController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    use Table;
+    protected $model = Struktur::class;
     public function index()
     {
-        $struktur = Struktur::orderBy('created_at','DESC')->first();
+        $struktur = Struktur::orderBy('created_at', 'DESC')->first();
         return view('struktur', compact('struktur'));
     }
 
@@ -25,7 +29,7 @@ class StrukturController extends Controller
      */
     public function create()
     {
-        //
+        return view('formstruktur');
     }
 
     /**
@@ -85,8 +89,19 @@ class StrukturController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function anyData(Request $request)
     {
-        //
+        return DataTables::of($this->model::query())
+        ->addColumn('file', function ($data) {
+            $del = '<img src="' . asset('struktur/'.$data->file) . '" class="col-sm-5 p-5 p-sm-0 pe-sm-3">';
+            return  $del;
+        })
+            ->addColumn('action', function ($data) {
+                $del = '<a href="#" data-id="' . $data->id . '" class="btn btn-danger hapus-data">Hapus</a>';
+                return  $del;
+            })
+            ->rawColumns(['file', 'action'])
+            ->make(true);
     }
+
 }

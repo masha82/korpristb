@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@push('css')
+    <link rel="stylesheet" href="{{ url('https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css') }}">
+@endpush
 @section('title')
     <title>Form Layanan KOPRI</title>
 @endsection
@@ -6,7 +9,6 @@
     <section id="content">
         <div class="content-wrap">
             <div class="container clearfix">
-
                 <div class="row">
                     @if (session('success'))
                         <div class="alert alert-success">
@@ -19,7 +21,7 @@
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
-                                <label class="form-label" >Upload Foto:</label>
+                                <label class="form-label">Upload Foto:</label>
                                 <input type="file" class="form-control" name="file" id="file" />
                             </div>
                             <div class="col-12 form-group">
@@ -31,7 +33,24 @@
                             </div>
                         </form>
                     </div>
-                   
+
+                </div>
+                <div class="row">
+                    <h6 class="text-center">Daftar Foto Layanan</h6>
+                    <div>
+                        <table class="table table-striped" id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>Gambar Layanan</th>
+                                    <th>Keterangan</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,3 +58,31 @@
     </section>
 @endsection
 
+@push('js')
+    <script src="{{ url('https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            var table = $('#myTable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('fotolayanan.data') }}",
+                columns: [{
+                        data: 'file',
+                        name: 'file'
+                    },
+                    {
+                        data: 'keterangan',
+                        name: 'keterangan'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
+                ]
+            });
+        });
+    </script>
+@endpush

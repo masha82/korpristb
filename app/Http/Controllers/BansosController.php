@@ -3,18 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Models\KegiatanBansos;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class BansosController extends Controller
 {
-     /**
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        if ($request->ajax()) {
+            return DataTables::of(KegiatanBansos::query())
+                ->addColumn('tgl_keg', function ($data) {
+                    return Carbon::parse($data->tgl_keg)->isoFormat('dddd, D MMMM Y');
+                })
+                ->make(true);
+        }
+        return view('bansos');
     }
 
     /**

@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@push('css')
+    <link rel="stylesheet" href="{{ url('https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css') }}">
+@endpush
 @section('title')
     <title>Form Berita</title>
 @endsection
@@ -14,8 +17,7 @@
                         </div>
                     @endif
                     <div class="col-lg-6">
-                        <form class="row" action="{{ route('news.store') }}" method="post"
-                            enctype="multipart/form-data">
+                        <form class="row" action="{{ route('news.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
@@ -55,26 +57,77 @@
                             </div>
                         </form>
                     </div>
-                    
+
+                </div>
+                <div class="row">
+                    <h6 class="text-center">Daftar Berita</h6>
+                    <div>
+                        <table class="table table-striped" id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>Judul</th>
+                                    <th>Kategori</th>
+                                    <th>Sumber</th>
+                                    <th>Editor</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 @endsection
 @push('js')
-<script>
-    $('.summernote').summernote({
-  toolbar: [
-    // [groupName, [list of button]]
-    ['style', ['bold', 'italic', 'underline', 'clear']],
-    ['font', ['strikethrough', 'superscript', 'subscript']],
-    ['fontsize', ['fontsize']],
-    ['color', ['color']],
-    ['para', ['ul', 'ol', 'paragraph']],
-    ['height', ['height']],
-    ['link', ['link']]
-  ]
-});
-  </script>
+<script src = "{{ url('https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js') }}" ></script>
+    <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            var table = $('#myTable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('news.data') }}",
+                columns: [{
+                        data: 'judul',
+                        name: 'judul'
+                    },
+                    {
+                        data: 'kategori',
+                        name: 'kategori'
+                    },
+                    {
+                        data: 'sumber',
+                        name: 'sumber'
+                    },
+                    {
+                        data: 'editor',
+                        name: 'editor'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
+                ]
+            });
+
+            $('.summernote').summernote({
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['font', ['strikethrough', 'superscript', 'subscript']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['height', ['height']],
+                    ['link', ['link']]
+                ]
+            });
+        });
+    </script>
 @endpush

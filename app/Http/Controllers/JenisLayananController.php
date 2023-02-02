@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\JenisLayanan;
 use App\Models\Layanan;
+use App\Traits\Table;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
@@ -14,10 +15,12 @@ class JenisLayananController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    use Table;
+    protected $model = JenisLayanan::class;
     public function index(Request $request)
     {
-        $layanan = Layanan::orderBy('created_at','DESC')->first();
-        $jenis = JenisLayanan::orderBy('created_at','DESC')->get();
+        $layanan = Layanan::orderBy('created_at', 'DESC')->first();
+        $jenis = JenisLayanan::orderBy('created_at', 'DESC')->get();
         return view('layanan', compact('layanan', 'jenis'));
     }
 
@@ -28,7 +31,7 @@ class JenisLayananController extends Controller
      */
     public function create()
     {
-        //
+        return view('formjenislayanan');
     }
 
     /**

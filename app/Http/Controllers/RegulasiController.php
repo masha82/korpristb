@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Regulasi;
+use App\Traits\Table;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
@@ -13,15 +14,17 @@ class RegulasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    use Table;
+    protected $model = Regulasi::class;
     public function index(Request $request)
     {
         if ($request->ajax()) {
             return DataTables::of(Regulasi::query())
-            ->addColumn('action', function ($data) {
-                $download = '<a target="_blank" href="'.url('dokhukum/'.$data->dokumen).'" data-id="' . $data->id . '" class="btn btn-primary">Unduh</a>';
-                return $download;
-            })
-            ->make(true);
+                ->addColumn('action', function ($data) {
+                    $download = '<a target="_blank" href="' . url('dokhukum/' . $data->dokumen) . '" data-id="' . $data->id . '" class="btn btn-primary">Unduh</a>';
+                    return $download;
+                })
+                ->make(true);
         }
         return view('regulasi');
     }
@@ -33,7 +36,7 @@ class RegulasiController extends Controller
      */
     public function create()
     {
-        //
+        return view('formregulasi');
     }
 
     /**
@@ -93,8 +96,4 @@ class RegulasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -1,4 +1,7 @@
 @extends('layouts.master')
+@push('css')
+    <link rel="stylesheet" href="{{ url('https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css') }}">
+@endpush
 @section('title')
     <title>Form Regulasi/Dasar Hukum</title>
 @endsection
@@ -6,7 +9,6 @@
     <section id="content">
         <div class="content-wrap">
             <div class="container clearfix">
-
                 <div class="row">
                     @if (session('success'))
                         <div class="alert alert-success">
@@ -53,8 +55,62 @@
                     </div>
                     
                 </div>
+                <div class="row">
+                    <h6 class="text-center">Daftar Berita</h6>
+                    <div>
+                        <table class="table table-striped" id="myTable">
+                            <thead>
+                                <tr>
+                                    <th>JUDUL REGULASI</th>
+                                    <th>NOMOR</th>
+                                    <th>TAHUN</th>
+                                    <th>JENIS</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+    
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     </section>
 @endsection
+@push('js')
+<script src = "{{ url('https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js') }}" ></script>
+    <script src="{{ url('https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            var table = $('#myTable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('regulasi.data') }}",
+                columns: [{
+                        data: 'judul',
+                        name: 'judul'
+                    },
+                    {
+                        data: 'nomor',
+                        name: 'nomor'
+                    },
+                    {
+                        data: 'tahun',
+                        name: 'tahun'
+                    },
+                    {
+                        data: 'jenis',
+                        name: 'jenis'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
+                ]
+            });
+        });
+    </script>
+@endpush

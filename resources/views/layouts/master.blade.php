@@ -117,7 +117,7 @@
                                 <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
                                         <div>Layanan KORPRI</div>
                                     </a></li>
-                                <li class="menu-item"><a class="menu-link" href="{{ url('kegiatanbansos') }}">
+                                <li class="menu-item"><a class="menu-link" href="{{ route('bansos.index') }}">
                                         <div>Kegiatan BANSOS</div>
                                     </a></li>
 
@@ -133,25 +133,26 @@
                                     </a>
                                     <ul class="sub-menu-container" style="">
                                         <li class="menu-item" style="">
-                                            <a class="menu-link" href="{{ url('formberita') }}">
+                                            <a class="menu-link" href="{{ route('news.create') }}">
                                                 <div>Form Berita</div>
                                             </a>
                                         </li>
                                         <li class="menu-item" style="">
-                                            <a class="menu-link" href="{{ url('formregulasi') }}">
+                                            <a class="menu-link" href="{{ route('regulasi.create') }}">
                                                 <div>Form Dasar Hukum</div>
                                             </a>
                                         </li>
                                         <li class="menu-item" style="">
-                                            <a class="menu-link" href="{{ url('formstruktur') }}">
+                                            <a class="menu-link" href="{{ route('strukturorg.create') }}">
                                                 <div>Form Struktur Organisasi</div>
                                             </a>
                                         </li>
                                         <li class="menu-item"><a class="menu-link"
-                                                href="{{ url('formjenislayanan') }}">
+                                                href="{{ route('services.create') }}">
                                                 <div>Form Jenis Layanan KORPRI</div>
                                             </a></li>
-                                        <li class="menu-item"><a class="menu-link" href="{{ url('formlayanan') }}">
+                                        <li class="menu-item"><a class="menu-link"
+                                                href="{{ route('fotolayanan.create') }}">
                                                 <div>Form Foto Layanan KORPRI</div>
                                             </a></li>
                                         <li class="menu-item"><a class="menu-link"

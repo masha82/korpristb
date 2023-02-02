@@ -19,9 +19,14 @@ trait Table
     {
         return DataTables::of($this->model::query())
             ->addColumn('action', function ($data) {
-                $del = '<a href="#" data-id="' . $data->id . '" class="btn btn-danger hapus-data"><i class="fa fa-times"></i></a>';
+                $del = '<a href="#" data-id="' . $data->id . '" class="btn btn-danger hapus-data">Hapus</a>';
                 return  $del;
             })
             ->make(true);
+    }
+
+    public function destroy($id)
+    {
+        $this->model::destroy($id);
     }
 }

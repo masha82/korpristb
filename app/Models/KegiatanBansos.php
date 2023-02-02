@@ -13,5 +13,5 @@ class KegiatanBansos extends Model
      *
      * @var array
      */
-    protected $fillable = ['tgl_keg', 'keterangan'];
+    protected $fillable = ['tgl_keg', 'keterangan', 'tempat'];
 }
