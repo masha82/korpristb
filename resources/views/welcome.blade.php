@@ -46,7 +46,7 @@
                                     alt="Image 3"></a>
                         </div>
                         <div class="entry-title">
-                            <h3><a href="demo-blog-single.html"
+                            <h3><a href="{{ route('news.show', $berita->first()->id) }}"
                                     class="stretched-link color-underline"><span>{{ $berita->first()->judul }}</span></a>
                             </h3>
                         </div>
@@ -76,7 +76,7 @@
                                 <div class="col-md-8">
                                     <div class="entry-title title-xs">
                                         {{-- <div class="entry-categories"><a href="demo-blog-categories.html">Market</a></div> --}}
-                                        <h3><a href="demo-blog-single.html"
+                                        <h3><a href="{{route('news.show', $item->id)}}"
                                                 class="stretched-link color-underline">{{ $item->judul }}</a></h3>
                                     </div>
                                     <div class="entry-meta">
