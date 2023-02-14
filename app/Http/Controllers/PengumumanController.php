@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pengumuman;
+use App\Traits\Table;
 use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 
 class PengumumanController extends Controller
 {
@@ -12,6 +14,8 @@ class PengumumanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    use Table;
+    protected $model = Pengumuman::class;
     public function index()
     {
         $info = Pengumuman::orderBy('updated_at','DESC')->paginate(10);
@@ -25,7 +29,7 @@ class PengumumanController extends Controller
      */
     public function create()
     {
-        //
+        return view('formpengumuman');
     }
 
     /**
@@ -59,7 +63,9 @@ class PengumumanController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Pengumuman::findOrFail($id);
+        $pengumuman = Pengumuman::all()->take('5');
+        return view('showpengumuman', compact('data','pengumuman'));
     }
 
     /**
@@ -91,8 +97,4 @@ class PengumumanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -12,7 +12,9 @@
                     <h6 class="text-dark text-center">LAYANAN BANTUAN KORPRI KABUPATEN SITUBONDO </h6>
                 </div>
                 <div class="row">
+                    @if (!empty($layanan->file))    
                     <img src="{{ asset('layanan/' . $layanan->file) }}" alt="FAQs" class="px-5 mt-4">
+                    @endif
                 </div>
             </div>
         </div>

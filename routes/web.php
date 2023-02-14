@@ -20,29 +20,16 @@ Route::get('/visi', function () {
     return view('visi');
 });
 
-Route::get('/formgaleri', function () {
-    return view('formgaleri');
-});
-
-Route::get('/formkegbansos', function () {
-    return view('formkegbansos');
-});
-
-Route::get('/formpengumuman', function () {
-    return view('formpengumuman');
-});
-
-Route::get('/formstruktur', function () {
-    return view('formstruktur');
-});
-
-Auth::routes();
+Auth::routes(['register' => false]);
 // tabel
 Route::get('/news/data', [App\Http\Controllers\BeritaController::class, 'anyData'])->name('news.data');
 Route::get('/regulasi/data', [App\Http\Controllers\RegulasiController::class, 'anyData'])->name('regulasi.data');
 Route::get('/strukturorg/data', [App\Http\Controllers\StrukturController::class, 'anyData'])->name('strukturorg.data');
 Route::get('/services/data', [App\Http\Controllers\JenisLayananController::class, 'anyData'])->name('services.data');
 Route::get('/fotolayanan/data', [App\Http\Controllers\LayananController::class, 'anyData'])->name('fotolayanan.data');
+Route::get('/bansos/data', [App\Http\Controllers\BansosController::class, 'anyData'])->name('bansos.data');
+Route::get('/gallery/data', [App\Http\Controllers\GaleriController::class, 'anyData'])->name('gallery.data');
+Route::get('/info/data', [App\Http\Controllers\PengumumanController::class, 'anyData'])->name('info.data');
 
 //resources
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
