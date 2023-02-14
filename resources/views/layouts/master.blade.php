@@ -118,8 +118,35 @@
                                         <div>Layanan KORPRI</div>
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="{{ route('bansos.index') }}">
-                                        <div>Kegiatan BANSOS</div>
-                                    </a></li>
+                                        <div>Kegiatan KORPRI</div>
+                                    </a>
+                                    <ul class="sub-menu-container" style="">
+                                        <li class="menu-item" style="">
+                                            <a class="menu-link" href="{{ url('visi') }}">
+                                                <div>KORPRI PEDULI</div>
+                                            </a>
+                                            <li class="menu-item" style="">
+                                                <a class="menu-link" href="{{ url('regulasi') }}">
+                                                    <div>HUT KORPRI</div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item" style="">
+                                                <a class="menu-link" href="{{ url('strukturorg') }}">
+                                                    <div>MUSKAB KORPRI</div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item" style="">
+                                                <a class="menu-link" href="{{ url('strukturorg') }}">
+                                                    <div>KORPRI RELIGI</div>
+                                                </a>
+                                            </li>
+                                            <li class="menu-item" style="">
+                                                <a class="menu-link" href="{{ url('strukturorg') }}">
+                                                    <div>RAPAT KERJA</div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                </li>
 
                                 <li class="menu-item"><a class="menu-link" href="{{ route('gallery.index') }}">
                                         <div>Galeri</div>
@@ -152,12 +179,8 @@
                                                 <div>Form Jenis Layanan KORPRI</div>
                                             </a></li>
                                         <li class="menu-item"><a class="menu-link"
-                                                href="{{ route('fotolayanan.create') }}">
-                                                <div>Form Foto Layanan KORPRI</div>
-                                            </a></li>
-                                        <li class="menu-item"><a class="menu-link"
                                                 href="{{ url('formkegbansos') }}">
-                                                <div>Form Kegiatan BANSOS</div>
+                                                <div>Form Kegiatan KORPRI</div>
                                             </a></li>
                                         <li class="menu-item"><a class="menu-link" href="{{ url('formgaleri') }}">
                                                 <div>Form Galeri</div>
