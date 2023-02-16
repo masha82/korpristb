@@ -119,7 +119,7 @@
                                         <div>Layanan KORPRI</div>
                                     </a></li>
                                 <li class="menu-item"><a class="menu-link" href="{{ route('bansos.index') }}">
-                                        <div>Kegiatan BANSOS</div>
+                                        <div>Kegiatan KORPRI</div>
                                     </a></li>
 
                                 <li class="menu-item"><a class="menu-link" href="{{ route('gallery.index') }}">
