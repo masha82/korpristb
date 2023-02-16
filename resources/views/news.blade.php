@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="col-md-8 ps-md-4">
                                     <div class="entry-title title-sm">
-                                        <h2><a href="{{route('news.show',$item->id)}}">{{ $item->judul }}</a></h2>
+                                        <h2><a href="#">{{ $item->judul }}</a></h2>
                                     </div>
                                     <div class="entry-meta">
                                         <ul>
