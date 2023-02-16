@@ -10,8 +10,7 @@
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="heading-block mx-auto" style="max-width: 700px">
-                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">DASAR HUKUM</h2>
-                    <h4 class="gradient-text center gradient-horizon">REGULASI YANG BERKAITAN DENGAN KORPRI </h4>
+                    <h2 class="mb-2 nott center ls0 gradient-text gradient-horizon">REGULASI YANG BERKAITAN DENGAN KORPRI</h2>
                 </div>
                 <div>
                     <table class="table table-striped" id="myTable">

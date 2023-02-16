@@ -65,10 +65,10 @@
                         <!-- Logo
                     ============================================= -->
                         <div id="logo">
-                            <a href="demo-freelancer.html" class="standard-logo"><img
+                           <!-- <a href="demo-freelancer.html" class="standard-logo"><img
                                     src="{{ asset('logo_situbondo.png') }}"
-                                    style="height: 60px!important;max-height:60px!important" alt="Canvas Logo"></a>
-                            <a href="demo-freelancer.html" class="retina-logo"><img
+                                    style="height: 60px!important;max-height:60px!important" alt="Canvas Logo" ></a> -->
+                            <a href="demo-freelancer.html" class="retina-logo"><img class="d-flex align-content-center justify-content-center"
                                     src="{{ asset('logo_situbondo.png') }}" alt="Canvas Logo"></a>
                         </div><!-- #logo end -->
 
@@ -118,9 +118,47 @@
                                 <li class="menu-item"><a class="menu-link" href="{{ route('services.index') }}">
                                         <div>Layanan KORPRI</div>
                                     </a></li>
-                                <li class="menu-item"><a class="menu-link" href="{{ route('bansos.index') }}">
+                                <li class="menu-item"><a class="menu-link" href="#">
                                         <div>Kegiatan KORPRI</div>
-                                    </a></li>
+                                    </a>
+                                    <ul class="sub-menu-container" style="">
+                                        <li class="menu-item" style="">
+                                            <a class="menu-link" href="{{ url('visi') }}">
+                                                <div>KORPRI PEDULI</div>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" style="">
+                                            <a class="menu-link" href="{{ url('regulasi') }}">
+                                                <div>HUT KORPRI</div>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" style="">
+                                            <a class="menu-link" href="{{ url('strukturorg') }}">
+                                                <div>MUSKAB KORPRI</div>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" style="">
+                                            <a class="menu-link" href="{{ url('strukturorg') }}">
+                                                <div>KORPRI RELIGI</div>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" style="">
+                                            <a class="menu-link" href="{{ url('strukturorg') }}">
+                                                <div>RAPAT KERJA</div>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" style="">
+                                            <a class="menu-link" href="{{ url('strukturorg') }}">
+                                                <div>KORPRI SINERGI</div>
+                                            </a>
+                                        </li>
+                                        <li class="menu-item" style="">
+                                            <a class="menu-link" href="{{ url('strukturorg') }}">
+                                                <div>LAIN-LAIN</div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
 
                                 <li class="menu-item"><a class="menu-link" href="{{ route('gallery.index') }}">
                                         <div>Galeri</div>

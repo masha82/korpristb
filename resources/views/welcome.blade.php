@@ -28,7 +28,7 @@
 
                     <div class="mx-auto" style="max-width: 600px">
                         <p class="lead fw-normal text-dark mb-0">Korps Pegawai Republik Indonesia atau biasa dikenal KORPRI
-                            berdiri berdasarkan Keputusan Presiden Nomor 82 Tahun 1971,<br> 29 November 1971. </p>
+                            berdiri berdasarkan Keputusan Presiden Nomor 82 Tahun 1971, 29 November 1971. </p>
                     </div>
                 </div>
             </div>

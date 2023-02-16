@@ -108,9 +108,9 @@
                             success: function(response) {
                                 table.ajax.reload();
                                 Swal.fire(
-                                    'Terapus!',
-                                    'Your file has been deleted.',
-                                    'success'
+                                    'Terhapus!',
+                                    'File sudah dihapus',
+                                    'sukses'
                                 )
                             },
                             failure: function(response) {

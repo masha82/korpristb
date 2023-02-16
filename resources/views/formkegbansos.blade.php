@@ -4,7 +4,7 @@
     <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css" rel="stylesheet">
 @endpush
 @section('title')
-    <title>Form Kegiatan Bansos</title>
+    <title>Form Kegiatan Korpri</title>
 @endsection
 @section('content')
     <section id="content">
@@ -113,9 +113,9 @@
                             success: function(response) {
                                 table.ajax.reload();
                                 Swal.fire(
-                                    'Terapus!',
-                                    'Your file has been deleted.',
-                                    'success'
+                                    'Terhapus!',
+                                    'File sudah dihapus',
+                                    'sukses'
                                 )
                             },
                             failure: function(response) {

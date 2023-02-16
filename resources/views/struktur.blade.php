@@ -7,8 +7,7 @@
         <div class="col-md-12">
             <div class="container topmargin bottommargin-lg">
                 <div class="heading mx-auto" style="max-width: 700px">
-                    <h2 class="nott center ls0 gradient-text gradient-horizon">STRUKTUR ORGANISASI</h2>
-                    <h4 class="text-dark">STRUKTUR ORGANISASI KORPRI KABUPATEN SITUBONDO </h4>
+                    <h2 class="nott center ls0 gradient-text gradient-horizon">STRUKTUR ORGANISASI KORPRI KABUPATEN SITUBONDO</h2>
                 </div>
                 <div class="row">
                     @if (!empty($struktur->file))
