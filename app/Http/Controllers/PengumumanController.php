@@ -63,7 +63,9 @@ class PengumumanController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = Pengumuman::findOrFail($id);
+        $pengumuman = Pengumuman::all()->take('5');
+        return view('showpengumuman', compact('data','pengumuman'));
     }
 
     /**

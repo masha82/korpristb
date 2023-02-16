@@ -50,7 +50,7 @@
                         style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
 
                         <div class="testi-content">
-                            <img src="{{ asset('top-bar.jpg') }}" alt="">
+                            <img src="{{ asset('topbar-new.jpg') }}" alt="">
                         </div>
                     </div>
                 </div>

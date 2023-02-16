@@ -37,13 +37,13 @@
                                     <h4 id="faq-1"><strong>A.</strong> Informasi</h4>
                                     {!! $content->informasi !!}
                                     <div class="line"></div>
-                                    <h4 id="faq-1"><strong>B.</strong> Mekanisme</h4>
-                                    {!! $content->mekanisme !!}
-                                    <div class="line"></div>
-                                    <h4 id="faq-1"><strong>C.</strong> Syarat</h4>
-                                    {!! $content->syarat !!}
-                                    <div class="line"></div>
-                                    <h4 id="faq-1"><strong>D.</strong> Keterangan</h4>
+                                    <!--<h4 id="faq-1"><strong>B.</strong> Mekanisme</h4>-->
+                                    <!--{!! $content->mekanisme !!}-->
+                                    <!--<div class="line"></div>-->
+                                    <!--<h4 id="faq-1"><strong>C.</strong> Syarat</h4>-->
+                                    <!--{!! $content->syarat !!}-->
+                                    <!--<div class="line"></div>-->
+                                    <h4 id="faq-1"><strong>B.</strong> Keterangan</h4>
                                     {!! $content->keterangan !!}
                                     <div class="line"></div>
                                 </div>

@@ -43,7 +43,7 @@
                                         </ul>
                                     </div>
                                     <div class="entry-content">
-                                        <a href="#" class="button button-border button-rounded">Baca selengkapnya</a>
+                                        <a href="{{route('info.show', $item->id)}}" class="button button-border button-rounded">Baca selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
