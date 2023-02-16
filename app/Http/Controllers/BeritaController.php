@@ -14,7 +14,7 @@ class BeritaController extends Controller
      * @return \Illuminate\Http\Response
      */
     use Table;
-    protected $model = Berita::class;
+    protected $model= Berita::class;
 
     public function index()
     {
@@ -57,9 +57,7 @@ class BeritaController extends Controller
      */
     public function show($id)
     {
-        $berita = Berita::all()->take(5);
-        $data = Berita::findOrFail($id);
-        return view('shownews', compact('data','berita'));
+        //
     }
 
     /**
@@ -91,4 +89,5 @@ class BeritaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+   
 }

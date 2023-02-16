@@ -9,7 +9,7 @@
             <div class="container topmargin bottommargin-lg">
                 <div class="mx-auto" style="max-width: 700px">
                     <h2 class="nott center ls0 gradient-text gradient-horizon">LAYANAN KORPRI</h2>
-                    <h6 class="text-dark text-center">LAYANAN BANTUAN KORPRI KABUPATEN SITUBONDO </h6>
+                    <h6 class="text-dark text-center"></h6>
                 </div>
                 <div class="row">
                     @if (!empty($layanan->file))    

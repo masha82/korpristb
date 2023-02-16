@@ -49,7 +49,7 @@
 
                 </div>
                 <div class="row">
-                    <h6 class="text-center">Daftar Berita</h6>
+                    <h6 class="text-center">Daftar Layanan</h6>
                     <div>
                         <table class="table table-striped" id="myTable">
                             <thead>
@@ -108,9 +108,9 @@
                             success: function(response) {
                                 table.ajax.reload();
                                 Swal.fire(
-                                    'Terapus!',
-                                    'Your file has been deleted.',
-                                    'success'
+                                    'Terhapus!',
+                                    'File anda telah terhapus.',
+                                    'sukses'
                                 )
                             },
                             failure: function(response) {
