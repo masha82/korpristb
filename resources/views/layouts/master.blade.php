@@ -190,13 +190,13 @@
                                                     href="{{ route('services.create') }}">
                                                     <div>Form Jenis Layanan KORPRI</div>
                                                 </a></li>
-                                            <li class="menu-item"><a class="menu-link"
+                                           <!-- <li class="menu-item"><a class="menu-link"
                                                     href="{{ route('fotolayanan.create') }}">
                                                     <div>Form Foto Layanan KORPRI</div>
-                                                </a></li>
+                                                </a></li> -->
                                             <li class="menu-item"><a class="menu-link"
                                                     href="{{ route('bansos.create') }}">
-                                                    <div>Form Kegiatan BANSOS</div>
+                                                    <div>Form Kegiatan Korpri</div>
                                                 </a></li>
                                             <li class="menu-item"><a class="menu-link"
                                                     href="{{ route('gallery.create') }}">
