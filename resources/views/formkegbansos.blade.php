@@ -22,6 +22,19 @@
                             @csrf
                             @method('POST')
                             <div class="col-12 form-group">
+                                <label for="sel1">Nama Kegiatan:</label>
+                                <select class="form-control" name="status" id="status"">
+                                    <option><label>-- Pilih Salah Satu --</label></option>
+                                    <option value="1">Korpri Peduli</option>
+                                    <option value="2">HUT Korpri</option>
+                                    <option value="3">Muskab Korpri</option>
+                                    <option value="4">Korpri Religi</option>
+                                    <option value="5">Rapat Kerja</option>
+                                    <option value="6">Korpri Sinergi</option>
+                                    <option value="7">Lain-lain</option>
+                                </select>
+                            </div>
+                            <div class="col-12 form-group">
                                 <label>Tanggal Kegiatan:</label>
                                 <input type="text" name="tgl_keg" id="tgl_keg" class="form-control datepicker">
                             </div>
