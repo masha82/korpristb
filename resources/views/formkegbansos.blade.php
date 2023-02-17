@@ -59,6 +59,7 @@
                         <table class="table table-striped" id="myTable">
                             <thead>
                                 <tr>
+                                    <th>NAMA KEGIATAN</th>
                                     <th>TANGGAL</th>
                                     <th>TEMPAT</th>
                                     <th>KETERANGAN KEGIATAN</th>
@@ -87,6 +88,10 @@
                 serverSide: true,
                 ajax: "{{ route('bansos.data') }}",
                 columns: [{
+                        data: 'id_kegiatan',
+                        name: 'id_kegiatan'
+                    },
+                    {
                         data: 'tgl_keg',
                         name: 'tgl_keg'
                     },
