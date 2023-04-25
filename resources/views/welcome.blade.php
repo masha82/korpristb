@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/colors.php?color=F39887') }}" type="text/css"/>
 @endpush
 @section('title')
-    <title>KORPRI KABUPATEN SITUBONDO</title>
+    <title>DESA BANYUPUTIH</title>
 @endsection
 
 @section('content')
@@ -20,9 +20,10 @@
                                   data-margin="0" data-autoplay="3000" data-loop="true" data-nav="false"
                                   data-pagi="false"
                                   data-animate-in="fadeInUp">
-                                <div class="fw-bold" style="color:#AA9B4E">KORPRI</div>
-                                <div class="fw-bold" style="color:#AA9B4E">KABUPATEN</div>
-                                <div class="fw-bold" style="color:#AA9B4E">SITUBONDO</div>
+                                <div class="fw-bold" style="color:#1a9256">DESA BANYUPUTIH</div>
+                                {{-- <div class="fw-bold" style="color:#AA9B4E">BANYUPUTIH</div> --}}
+                                <div class="fw-bold" style="color:#6572ec">KABUPATEN</div>
+                                <div class="fw-bold" style="color:#6572ec">SITUBONDO</div>
                             </span>
                         </h1>
                     </div>
